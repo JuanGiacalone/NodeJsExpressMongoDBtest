@@ -16,12 +16,18 @@ const app = express();
 // app.use(auth)... en este caso al usar cualquier ruta, se realiza un auth..
 
 // Rutas importadas
-import farosRoute from './routes/faros.js'
+import {farosRouter} from './routes/faros.js'
 import comentariosRoute from './routes/comentarios.js'
+import bodyParser from 'body-parser';
 
-// Indexo el middleware para /faros a su ruta
 
-app.use('/faros',farosRoute);
+// Creo middleware para el parser de los cuerpos q se utilizen
+
+app.use(bodyParser.json());
+
+
+// Indexo el middleware para /faros y /comments a su ruta
+app.use('/faros',farosRouter);
 app.use('/comentarios',comentariosRoute);
 
 
