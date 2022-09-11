@@ -28,5 +28,5 @@ const faroSchema = mongoose.Schema({
     urlImagen: String
 })
 
-export const farosModel = mongoose.model('faros', faroSchema);
-export const puntosModel = mongoose.model('puntos', puntoSchema);
+export const faroModel = mongoose.model('faros', faroSchema);
+export const puntoModel = mongoose.model('puntos', puntoSchema);

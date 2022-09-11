@@ -1,0 +1,5 @@
+{"idFaro": 0,
+"nombre": "test",
+"coordenadas": 
+{ "type":"Point", "coordenadas": [10,10]}
+}

@@ -1,11 +1,36 @@
-import express from 'express'
+import express from 'express';
+const comentariosRouter = express.Router();
+import {commentModel} from '../models/Comment.js'
+import mongoose from 'mongoose'
+
+mongoose.connect(process.env.DB_CONNECTION, () => {
+  console.log('DB connecteds');
+} )
 
 
-const router = express.Router();
-
-
-export default router.get('/', (req, res) => {
+ comentariosRouter.get('/', (req, res) => {
   res.send('lo comentario') 
 });
+
+  comentariosRouter.post('/add', async (req, res) => {
+
+    console.log(req.body.name);
+
+  const comment = new commentModel({
+    name: req.body.name,
+    body: req.body.body
+  })
+
+  try {
+    await comment.save();
+
+  } catch (error) {
+    res.json( { messasge: error })
+  }
+    
+});
+
+export {comentariosRouter}
+
 
 

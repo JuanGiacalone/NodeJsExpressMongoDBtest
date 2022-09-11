@@ -17,7 +17,7 @@ const app = express();
 
 // Rutas importadas
 import {farosRouter} from './routes/faros.js'
-import comentariosRoute from './routes/comentarios.js'
+import {comentariosRouter} from './routes/comentarios.js'
 import bodyParser from 'body-parser';
 
 
@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 
 // Indexo el middleware para /faros y /comments a su ruta
 app.use('/faros',farosRouter);
-app.use('/comentarios',comentariosRoute);
+app.use('/comentarios',comentariosRouter);
 
 
 // Conexion a BD
