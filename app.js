@@ -1,10 +1,14 @@
 import express from 'express'
 import mongoose from 'mongoose'
+import ServerApiVersion from 'mongoose'
 import dotenv from 'dotenv/config'
+//import cors from 'cors';
 
+// Seteo de puertos y base a utilizar
 const PUERTO = 3000;
+const DB = 'farosArg_test0'
 
-// Instacia de la App
+// Instancia de la App
 const app = express();
 
 // Middleware -> se ejecutan cuando se hace una pegada a cierta ruta
@@ -25,20 +29,33 @@ import bodyParser from 'body-parser';
 
 app.use(bodyParser.json());
 
+// Middleware para poder ejecutar las peticiones desde cualquier sitio usando cors
+
+/// app.use(cors());
 
 // Indexo el middleware para /faros y /comments a su ruta
+
 app.use('/faros',farosRouter);
 app.use('/comentarios',comentariosRouter);
 
 
 // Conexion a BD
 
-mongoose.connect(process.env.DB_CONNECTION, () => {
-    console.log('DB connecteds');
+mongoose.connect(
+    process.env.DB_CONNECTION,
+    {
+        dbName: DB,
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        serverApi: ServerApiVersion.v1
+      }, 
+    (err) => {
+    err ?  console.log(err) : console.log(`BD ${DB} connectada`,);
 } )
 
 
 // Set el puerto de escucha 
+
 app.listen(PUERTO);
 
 

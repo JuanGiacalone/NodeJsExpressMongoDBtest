@@ -3,10 +3,6 @@ const comentariosRouter = express.Router();
 import {commentModel} from '../models/Comment.js'
 import mongoose from 'mongoose'
 
-mongoose.connect(process.env.DB_CONNECTION, () => {
-  console.log('DB connecteds');
-} )
-
 
  comentariosRouter.get('/', (req, res) => {
   res.send('lo comentario') 
