@@ -23,9 +23,8 @@ farosRouter.get('/:idFaro', async (req, res) => {
 
     const faro = await faroModel.findOne({idFaro: req.params.idFaro});
 
-
     // Verifico que exista el faro
-    faro ? res.json(faro) : res.json({"message": 'No se existe faro con idFaro:'+ (req.params.idFaro)});
+    faro ? res.json(faro) : res.json({"message": 'No existe faro con idFaro:'+ (req.params.idFaro)});
 
   } catch (error) {
 
@@ -37,31 +36,41 @@ farosRouter.get('/:idFaro', async (req, res) => {
 // POST - Agregar un faro
 farosRouter.post('/add', async (req, res) => { 
 
-    // Instanciacion de los modelos y asignacion de campos de la req.
-    // GEOJSON requiere los campos type = Point y coordinates
-    const punto = new puntoModel ({
-      type: req.body.coordenadas.type,
-      coordinates: req.body.coordenadas.coordinates
-    })
-    const faro = new faroModel ({
-      idFaro: req.body.idFaro,
-      nombre: req.body.nombre,
-      coordenadas: punto,
-      comentarios: req.body.comentarios
-    })
+    // Verifico que no exista el id faro
+   const faroExiste = await faroModel
+                      .findOne({idFaro: req.body.idFaro})
+                      .select('idFaro');
 
-    try {
-      // Guardado del faro
-      const savedFaro = await faro.save();
-
-      // Mensaje segun el exito del guardado
-      savedFaro ? res.json(savedFaro) : res.json('No se pudo guardar el faro')
-
-    } catch (error) {
-      res.json( { message: error })
-    }
+    // Si existe ese idFaro, no se inserta
+    if(faroExiste) { res.json({messagge:'El faro con idFaro: ' + faroExiste.idFaro + ' ya existe!'}) } 
+    else { 
     
-})
+      // Se Instancian los modelos y se asignan los campos de la req.
+      // GEOJSON requiere los campos type = Point y coordinates
+      const punto = new puntoModel ({
+        type: req.body.coordenadas.type,
+        coordinates: req.body.coordenadas.coordinates
+      })
+      const faro = new faroModel ({
+        idFaro: req.body.idFaro,
+        nombre: req.body.nombre,
+        coordenadas: punto,
+        comentarios: req.body.comentarios
+      })
+      
+      // Guardado del faro
+      try {
+        
+        const savedFaro = await faro.save();
+
+        // Mensaje segun el exito del guardado
+        savedFaro ? res.json(savedFaro) : res.json({messagge:'No se pudo guardar el faro'})
+
+      } catch (error) {
+        res.json( { message: error })
+      }
+    } 
+  })
 
 // Agrega un comentario al faro y devuelve los comentarios actualizado
 farosRouter.post('/addComment/:idFaro', async (req, res) => {
@@ -72,18 +81,20 @@ farosRouter.post('/addComment/:idFaro', async (req, res) => {
                                             findOneAndUpdate(
                                               {idFaro: req.params.idFaro}, 
                                               {$addToSet: {comentarios: req.body.comentarios}},
-                                              {new:true});
-    console.log(nuevoComentario);
+                                              {new:true})
+                                              .select('comentarios'); // Solo devuelve el array de comentarios 
+                                                                                     
+    
     // Verifico que exista el idFaro
     if (nuevoComentario) {
-      console.log('aca llega');
+      
       // Ubico el indice del comentario insertado
       const indexUltimoComentario = nuevoComentario.comentarios.length;
       // Envio el comentario insertado
       res.json(nuevoComentario.comentarios[indexUltimoComentario-1]);
       
       // Si no existe...
-    } else res.json( { message: 'No existe el idFaro:' + (req.params.idFaro)});
+    } else res.json( { message: 'No existe faro con idFaro:' + (req.params.idFaro)});
 
   } catch (error) {
 

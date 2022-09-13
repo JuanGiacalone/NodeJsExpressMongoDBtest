@@ -9,8 +9,8 @@ const puntoSchema = mongoose.Schema({
     coordinates: {
       type: [Number],
       required: true
-    }
-  });
+    }, 
+  }, {_id: false});
 
 const faroSchema = mongoose.Schema({
     idFaro: {type: Number, require:true},
@@ -25,7 +25,7 @@ const faroSchema = mongoose.Schema({
     activo: Boolean,
     accesibile: Boolean,
     accesoPago: Boolean,
-    urlImagen: String
+    urlImagen: String,
 })
 
 export const faroModel = mongoose.model('faros', faroSchema);

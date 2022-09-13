@@ -36,7 +36,7 @@ app.use(bodyParser.json());
 // Indexo el middleware para /faros y /comments a su ruta
 
 app.use('/faros',farosRouter);
-app.use('/comentarios',comentariosRouter);
+// app.use('/comentarios',comentariosRouter);
 
 
 // Conexion a BD
