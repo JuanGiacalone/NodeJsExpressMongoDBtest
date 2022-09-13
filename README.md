@@ -4,9 +4,9 @@ API Rest con MongoDB - Mongoose y Express / Backend para sitio web turistico de 
 
 ## Endpoints
 - *GET* /faros/all -> Devuelve todos los faros
-- *GET* /faros/_$idFaro_ -> Devuelve el faro segun idFaro
+- *GET* /faros/_*$idFaro*_ -> Devuelve el faro segun idFaro
 - *POST* /faros/add -> Crea un faro, usar el archivo <FarosJson.json>
-- *POST* /faros/addComment/_$idFaro_ -> Agrega comentarios al documento del faro
+- *POST* /faros/addComment/_*$idFaro*_ -> Agrega comentarios al documento del faro
 
 ## Configuracion local
 1. Clonar
