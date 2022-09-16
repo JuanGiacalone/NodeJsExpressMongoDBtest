@@ -6,7 +6,7 @@ import dotenv from 'dotenv/config'
 
 // Seteo de puertos y base a utilizar
 const PUERTO = 3000;
-const DB = 'farosArg_test0'
+const DB = 'farosArg_testv2'
 
 // Instancia de la App
 const app = express();
@@ -36,7 +36,7 @@ app.use(bodyParser.json());
 // Indexo el middleware para /faros y /comments a su ruta
 
 app.use('/faros',farosRouter);
-// app.use('/comentarios',comentariosRouter);
+app.use('/comentarios',comentariosRouter);
 
 
 // Conexion a BD

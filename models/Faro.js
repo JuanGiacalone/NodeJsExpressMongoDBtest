@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const puntoSchema = mongoose.Schema({
+export const puntoSchema = mongoose.Schema({
     type: {
       type: String,
       enum: ['Point'],
@@ -21,12 +21,10 @@ const faroSchema = mongoose.Schema({
     historia: String,
     ubicacion: String,
     impresiones: Number,
-    comentarios: [{fecha:Date, nombre: String, email: String, cuerpo: String}],
     activo: Boolean,
     accesibile: Boolean,
     accesoPago: Boolean,
     urlImagen: String,
-})
+}, { versionKey: false})
 
-export const faroModel = mongoose.model('faros', faroSchema);
-export const puntoModel = mongoose.model('puntos', puntoSchema);
+export const faroModel = mongoose.model('Faro', faroSchema);

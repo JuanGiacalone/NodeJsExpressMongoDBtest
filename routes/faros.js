@@ -1,5 +1,6 @@
 import express from 'express'
-import { faroModel,puntoModel } from '../models/Faro.js';
+import { comentarioModel } from '../models/Comentario.js';
+import { faroModel,puntoSchema } from '../models/Faro.js';
 const farosRouter = express.Router();
 
 // GET para todos los faros
@@ -47,15 +48,12 @@ farosRouter.post('/add', async (req, res) => {
     
       // Se Instancian los modelos y se asignan los campos de la req.
       // GEOJSON requiere los campos type = Point y coordinates
-      const punto = new puntoModel ({
-        type: req.body.coordenadas.type,
-        coordinates: req.body.coordenadas.coordinates
-      })
+
       const faro = new faroModel ({
+
         idFaro: req.body.idFaro,
         nombre: req.body.nombre,
-        coordenadas: punto,
-        comentarios: req.body.comentarios
+        coordenadas: {type: req.body.coordenadas.type, coordinates: req.body.coordenadas.coordinates},
       })
       
       // Guardado del faro
@@ -63,45 +61,57 @@ farosRouter.post('/add', async (req, res) => {
         
         const savedFaro = await faro.save();
 
-        // Mensaje segun el exito del guardado
-        savedFaro ? res.json(savedFaro) : res.json({messagge:'No se pudo guardar el faro'})
+        // Si se crea exitosamente, envia el faro guardado y crea un Documento tipo Comentario con los comentarios para ese faro
+        if (savedFaro)  {
+          creaComment(savedFaro._id);
+          res.json(savedFaro)
+
+                  // Mensaje segun el exito del guardado
+        } else res.json({messagge:'No se pudo guardar el faro'})
 
       } catch (error) {
         res.json( { message: error })
       }
     } 
   })
-
+async function creaComment(_idFaro) {
+  const comentario = new comentarioModel({_idFaro: _idFaro})
+  
+  return await comentario.save();
+}
 // Agrega un comentario al faro y devuelve los comentarios actualizado
-farosRouter.post('/addComment/:idFaro', async (req, res) => {
-  try {
-    // Funcion para agregar un comentario a el faro con el idFaro que entra como param
-    // findOneAndUpdate ({filtro}, {comentario que se agrega}, {opcion "new:true" para que retorne el array })
-    const nuevoComentario = await faroModel.
-                                            findOneAndUpdate(
-                                              {idFaro: req.params.idFaro}, 
-                                              {$addToSet: {comentarios: req.body.comentarios}},
-                                              {new:true})
-                                              .select('comentarios'); // Solo devuelve el array de comentarios 
+// farosRouter.post('/addComment/:idFaro', async (req, res) => {
+//   try {
+//     // Funcion para agregar un comentario a el faro con el idFaro que entra como param
+//     // findOneAndUpdate ({filtro}, {comentario que se agrega}, {opcion "new:true" para que retorne el array })
+//     const nuevoComentario = await faroModel.
+//                                             findOneAndUpdate(
+//                                               {idFaro: req.params.idFaro}, 
+//                                               {$addToSet: {comentarios: req.body.comentarios}},
+//                                               {new:true})
+//                                               .select('comentarios'); // Solo devuelve el array de comentarios 
                                                                                      
     
-    // Verifico que exista el idFaro
-    if (nuevoComentario) {
+//     // Verifico que exista el idFaro
+//     if (nuevoComentario) {
       
-      // Ubico el indice del comentario insertado
-      const indexUltimoComentario = nuevoComentario.comentarios.length;
-      // Envio el comentario insertado
-      res.json(nuevoComentario.comentarios[indexUltimoComentario-1]);
+//       // Ubico el indice del comentario insertado
+//       const indexUltimoComentario = nuevoComentario.comentarios.length;
+//       // Envio el comentario insertado
+//       res.json(nuevoComentario.comentarios[indexUltimoComentario-1]);
       
-      // Si no existe...
-    } else res.json( { message: 'No existe faro con idFaro:' + (req.params.idFaro)});
+//       // Si no existe...
+//     } else res.json( { message: 'No existe faro con idFaro:' + (req.params.idFaro)});
 
-  } catch (error) {
+//   } catch (error) {
 
-    res.json( { message: error })
+//     res.json( { message: error })
 
-  }
-});
+//   }
+// });
+
+
+
 
 export {farosRouter};
 
