@@ -2,11 +2,11 @@ import express from 'express'
 import mongoose from 'mongoose'
 import ServerApiVersion from 'mongoose'
 import dotenv from 'dotenv/config'
-//import cors from 'cors';
+import cors from 'cors';
 
 // Seteo de puertos y base a utilizar
-const PUERTO = 3000;
-const DB = 'farosArg_test0'
+const PUERTO = process.env.PUERTO || 3000;
+const DB = 'farosArg_test3'
 
 // Instancia de la App
 const app = express();
@@ -21,9 +21,7 @@ const app = express();
 
 // Rutas importadas
 import {farosRouter} from './routes/faros.js'
-import {comentariosRouter} from './routes/comentarios.js'
 import bodyParser from 'body-parser';
-
 
 // Creo middleware para el parser de los cuerpos q se utilizen
 
@@ -31,7 +29,7 @@ app.use(bodyParser.json());
 
 // Middleware para poder ejecutar las peticiones desde cualquier sitio usando cors
 
-/// app.use(cors());
+ app.use(cors());
 
 // Indexo el middleware para /faros y /comments a su ruta
 

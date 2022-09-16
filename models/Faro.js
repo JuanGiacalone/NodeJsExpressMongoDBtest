@@ -1,16 +1,6 @@
 import mongoose from 'mongoose'
-
-const puntoSchema = mongoose.Schema({
-    type: {
-      type: String,
-      enum: ['Point'],
-      required: true
-    },
-    coordinates: {
-      type: [Number],
-      required: true
-    }, 
-  }, {_id: false});
+import {  puntoSchema } from './Punto.js';
+import {  comentarioSchema } from './Comentario.js';
 
 const faroSchema = mongoose.Schema({
     idFaro: {type: Number, require:true},
@@ -21,12 +11,11 @@ const faroSchema = mongoose.Schema({
     historia: String,
     ubicacion: String,
     impresiones: Number,
-    comentarios: [{fecha:Date, nombre: String, email: String, cuerpo: String}],
+    comentarios: [comentarioSchema],
     activo: Boolean,
     accesibile: Boolean,
     accesoPago: Boolean,
     urlImagen: String,
-})
+},{ versionKey: false })
 
-export const faroModel = mongoose.model('faros', faroSchema);
-export const puntoModel = mongoose.model('puntos', puntoSchema);
+export const faroModel = mongoose.model('Faro', faroSchema);
