@@ -4,7 +4,7 @@ import { faroModel,puntoSchema } from '../models/Faro.js';
 const farosRouter = express.Router();
 
 // GET para todos los faros
-farosRouter.get('/all', async (req, res) => {
+farosRouter.get('/', async (req, res) => {
   try {
 
     // Implementacion de mongoose incluida con sus models
@@ -35,7 +35,7 @@ farosRouter.get('/:idFaro', async (req, res) => {
 });
 
 // POST - Agregar un faro
-farosRouter.post('/add', async (req, res) => { 
+farosRouter.post('/', async (req, res) => { 
 
     // Verifico que no exista el id faro
    const faroExiste = await faroModel
@@ -63,7 +63,7 @@ farosRouter.post('/add', async (req, res) => {
 
         // Si se crea exitosamente, envia el faro guardado y crea un Documento tipo Comentario con los comentarios para ese faro
         if (savedFaro)  {
-          creaComment(savedFaro._id);
+          creaComment(savedFaro.idFaro);
           res.json(savedFaro)
 
                   // Mensaje segun el exito del guardado
@@ -74,8 +74,8 @@ farosRouter.post('/add', async (req, res) => {
       }
     } 
   })
-async function creaComment(_idFaro) {
-  const comentario = new comentarioModel({_idFaro: _idFaro})
+async function creaComment(idFaro) {
+  const comentario = new comentarioModel({idFaro: idFaro})
   
   return await comentario.save();
 }

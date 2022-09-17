@@ -1,0 +1,30 @@
+import axios from "axios";
+
+const PUERTO = process.env.APP_PUERTO || 3000;
+  
+const host = `http://localhost:${PUERTO}/`
+  
+const endpoint = 'comentarios/'
+  
+const idFaro = '21'
+
+const options = {
+  method: 'PUT',
+  url: host + endpoint + idFaro,
+  data: {
+    comentarios: {
+      fecha: '12/9/2022',
+      nombre: 'JpPablos',
+      email: 'a@a.com',
+      cuerpo: 'akslkja;ls;jkldjaksdlkajsjdalkxaklsjdlakjsdlaksmxalksjdalskdjalskdmmxlkmasksajjdsadsajsajsljdsljasjsakjsksadsajkdsajkkjdsalkjdsakjdsakjdsjaksjdk1!!!!kal;skdlka;sl'
+    }
+  }
+};
+
+axios.request(options).then(function (response) {
+  console.log(response.data);
+}).catch(function (error) {
+  console.error(error);
+});
+
+    

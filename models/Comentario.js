@@ -1,8 +1,10 @@
 import mongoose from 'mongoose'
 
+/// type: mongoose.Schema.Types.ObjectId,
+
 const comentarioSchema = mongoose.Schema({
     
-  _idFaro: {  type: mongoose.Schema.Types.ObjectId, 
+  idFaro: {  type: Number, 
               required: true, 
               ref:'Faro'},
 
