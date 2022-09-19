@@ -18,5 +18,5 @@ API Rest con MongoDB - Mongoose y Express / Backend para sitio web turistico de 
 4. npm start
 ## Testear los endpoints
 1. Usar los .js de la carpeta axios_requests
-2. Correrlos con node $NombreArchivo$.js
-3. Modificar parametros de entrada segun necesidad  
+2. Correrlos con node NombreArchivo.js
+3. Modificar parametros de entrada segun necesidad
