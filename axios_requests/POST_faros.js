@@ -10,7 +10,7 @@ const options = {
   method: 'POST',
   url: host + endpoint,
   headers: {'Content-Type': 'application/json; charset=utf-8'},
-  data: '{"idFaro":21,"nombre":"testComm","coordenadas":{"coordinates":[52,52],"type":"Point"}}'
+  data: '{"idFaro":25,"nombre":"testComm","coordenadas":{"coordinates":[52,52],"type":"Point"}}'
 };
 
 axios.request(options).then(function (response) {

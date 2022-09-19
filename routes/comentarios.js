@@ -1,7 +1,7 @@
 import express from 'express';
 const comentariosRouter = express.Router();
 import {comentarioModel} from '../models/Comentario.js'
-import mongoose from 'mongoose'
+
 
 
 comentariosRouter.get('/', async (req, res) => {
@@ -52,7 +52,6 @@ comentariosRouter.put('/:idFaro', async (req, res) => {
 
 comentariosRouter.delete('/:idFaro&:idComentario', async (req, res) =>{
 
-
   try {
 
     // Se busca el documento comentario correspondiente al idFaro insertado y se hace un pull del Objeto comentario con idComentario
@@ -78,6 +77,15 @@ comentariosRouter.delete('/:idFaro&:idComentario', async (req, res) =>{
 
 })
 
+export async function eliminaDocComentario(idFaro) {
+  try {
+    let comm = await comentarioModel.deleteOne({ idFaro:idFaro })
+    return comm
+
+  } catch (error) {
+    return error
+  }
+}
 
 export {comentariosRouter}
 

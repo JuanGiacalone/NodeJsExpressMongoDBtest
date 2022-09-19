@@ -1,6 +1,7 @@
 import express from 'express'
 import { comentarioModel } from '../models/Comentario.js';
-import { faroModel,puntoSchema } from '../models/Faro.js';
+import { eliminaDocComentario } from './comentarios.js';
+import { faroModel } from '../models/Faro.js';
 const farosRouter = express.Router();
 
 // GET para todos los faros
@@ -79,36 +80,36 @@ async function creaComment(idFaro) {
   
   return await comentario.save();
 }
-// Agrega un comentario al faro y devuelve los comentarios actualizado
-// farosRouter.post('/addComment/:idFaro', async (req, res) => {
-//   try {
-//     // Funcion para agregar un comentario a el faro con el idFaro que entra como param
-//     // findOneAndUpdate ({filtro}, {comentario que se agrega}, {opcion "new:true" para que retorne el array })
-//     const nuevoComentario = await faroModel.
-//                                             findOneAndUpdate(
-//                                               {idFaro: req.params.idFaro}, 
-//                                               {$addToSet: {comentarios: req.body.comentarios}},
-//                                               {new:true})
-//                                               .select('comentarios'); // Solo devuelve el array de comentarios 
-                                                                                     
+
+farosRouter.delete('/:idFaro', async (req, res) => {
+ 
+  try {
+     // Verifico que exista el id faro
+  const faroExiste = await faroModel
+  .findOne({idFaro: req.params.idFaro})
+  .select('idFaro');
+
+    if(!faroExiste) {
+    res.json({"message": 'No existe faro con idFaro:'+ (req.params.idFaro)})
+    } else {
     
-//     // Verifico que exista el idFaro
-//     if (nuevoComentario) {
-      
-//       // Ubico el indice del comentario insertado
-//       const indexUltimoComentario = nuevoComentario.comentarios.length;
-//       // Envio el comentario insertado
-//       res.json(nuevoComentario.comentarios[indexUltimoComentario-1]);
-      
-//       // Si no existe...
-//     } else res.json( { message: 'No existe faro con idFaro:' + (req.params.idFaro)});
+    // Elimina el faro segun el idFaro ingresado por parametro
+    let faroAEliminar = await faroModel.deleteOne({ idFaro : req.params.idFaro})
 
-//   } catch (error) {
+    // Elimina el comentario segun el idFaro ingresado, se utiliza un metodo del archivo comentarios.js
+    let comentarioAEliminar = await eliminaDocComentario(req.params.idFaro)
 
-//     res.json( { message: error })
+    // Si ambos deletedcount son igual a 1, se elimina correctamente el faro; si esto no ocurre, se devuelve el resultado obtenido 
+    faroAEliminar.deletedCount && comentarioAEliminar.deletedCount ? 
+    res.json( { message:'Se elimino el faro con idFaro: ' + req.params.idFaro + ' y su documento de comentarios'}) :
+    res.json( { message:'DeletedCount del faro: ' + faroAEliminar.deletedCount + ' | DeletedCount del doc. comentario: ' + comentarioAEliminar.deletedCount,
+   explanation: '1 Significa que se elimino y 0 que no se elimino (puede ser que no exista)'})
 
-//   }
-// });
+   }
+} catch (error){ res.json({ messagge: error }) }
+
+})
+
 
 
 

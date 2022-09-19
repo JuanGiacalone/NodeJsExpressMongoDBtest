@@ -6,7 +6,7 @@ const host = `http://localhost:${PUERTO}/`
 
 const endpoint = 'comentarios/'
 
-const idFaro = '21'
+const idFaro = '25'
 
 const options = {method: 'GET', url: host + endpoint + idFaro};
 

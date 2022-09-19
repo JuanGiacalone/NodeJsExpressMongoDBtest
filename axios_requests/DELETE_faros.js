@@ -4,15 +4,15 @@ const PUERTO = process.env.APP_PUERTO || 3000;
 
 const host = `http://localhost:${PUERTO}/`
 
-const endpoint = 'comentarios/'
+const endpoint = 'faros/'
 
-const idFaro = '21'
+const idFaro = '25'
 
-const idComentario = '6325d80eee855b90211a15fe'
+
 
 const options = {
   method: 'DELETE',
-  url: host + endpoint + idFaro + '&' + idComentario
+  url: host + endpoint + idFaro 
 };
 
 axios.request(options).then(function (response) {
