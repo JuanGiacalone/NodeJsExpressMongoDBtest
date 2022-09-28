@@ -5,11 +5,11 @@ const PUERTO = process.env.APP_PUERTO || 3000;
 
 const host = `http://localhost:${PUERTO}/`
 
-const endpoint = 'faros/faro'
+const endpoint = "faros/"
 
-const idFaro = '3'
+const top = "top"
 
-const options = {method: 'GET', url: host + endpoint + idFaro};
+const options = {method: 'GET', url: host + endpoint + top };
   
 axios.request(options).then(function (response) {
     console.log(response.data);

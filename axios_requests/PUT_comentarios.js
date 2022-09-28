@@ -6,7 +6,7 @@ const host = `http://localhost:${PUERTO}/`
   
 const endpoint = 'comentarios/'
   
-const idFaro = '25'
+const idFaro = '1'
 
 const options = {
   method: 'PUT',
@@ -16,7 +16,7 @@ const options = {
       fecha: '12/9/2022',
       nombre: 'JpPablos',
       email: 'a@a.com',
-      cuerpo: 'akslkja;ls;jkldjaksdlkajsjdalkxaklsjdlakjsdlaksmxalksjdalskdjalskdmmxlkmasksajjdsadsajsajsljdsljasjsakjsksadsajkdsajkkjdsalkjdsakjdsakjdsjaksjdk1!!!!kal;skdlka;sl'
+      cuerpo: 'akslkja;ls;jkldjaksdlkajsjdalkxaklsjdlakjsdlaksmxalksjdalskdjalskdmmxlkmasksajjdsadsajsajsljdsljasjsakjsksadsajkdsajkkjdsalkjdsakjdsakjdsjaksjdk1!!!!kal;skdlka;slaaaaaaaaaaaaaaaaaaaaaaasdwe asd3e     asdawrr asdasdasdasdasd sd d s d!!!a sdasddwasdwawsad'
     }
   }
 };

@@ -1,0 +1,72 @@
+{
+    "idFaro": 3,
+    "nombre": "Querandi",
+    "provincia": "Buenos Aires",
+    "coordenadas": {
+        "coordinates": [
+            -37.35694403679386,
+            -56.79783855759059
+        ],
+        "type": "Point"
+    }
+   "accesible": true,
+   "accesoPago": true
+
+}
+{
+    "idFaro": 1,
+    "nombre": "Punta Mogotes",
+    "provincia": "Buenos Aires",
+    "coordenadas": {
+        "coordinates": [
+            -37.93274290893398, -57.16143765372652
+        ],
+        "type": "Point"
+    }
+   "accesible": true,
+   "accesoPago": true
+
+},
+{
+    "idFaro": 2,
+    "nombre": "Buen Tiempo",
+    "provincia": "Santa Cruz",
+    "coordenadas": {
+        "coordinates": [
+            -51.31682954207202, -67.74610416388055
+        ],
+        "type": "Point"
+    }
+   "accesible": true,
+   "accesoPago": true
+
+}
+{
+    "idFaro": 4,
+    "nombre": "San Jorge",
+    "provincia": "Chubut",
+    "coordenadas": {
+        "coordinates": [
+            -45.64385725226252, -66.77725854678228
+        ],
+        "type": "Point"
+    }
+   "accesible": true,
+   "accesoPago": true
+
+}
+{
+    "idFaro": 2,
+    "nombre": "Punta Norte NOAccesible Gratis",
+    "provincia" : "Chubut",
+    "coordenadas": {
+      "coordinates": [
+        -42.07484804987889, -63.76651582230084
+      ],
+      "type": "Point"
+    },
+   "accesible": false,
+   "accesoPago": false
+
+}
+

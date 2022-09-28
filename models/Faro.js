@@ -15,6 +15,7 @@ export const puntoSchema = mongoose.Schema({
 const faroSchema = mongoose.Schema({
     idFaro: {type: Number, require:true},
     nombre: String,
+    provincia: String,
     coordenadas: { type: puntoSchema, required: true},
     descripcion: String,
     caracteristicas: String,
@@ -22,7 +23,7 @@ const faroSchema = mongoose.Schema({
     ubicacion: String,
     impresiones: Number,
     activo: Boolean,
-    accesibile: Boolean,
+    accesible: Boolean,
     accesoPago: Boolean,
     urlImagen: String,
 }, { versionKey: false})

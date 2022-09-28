@@ -4,8 +4,10 @@ API Rest con MongoDB - Mongoose y Express / Backend para sitio web turistico de 
 
 ## Endpoints
 - *GET* /faros/ -> Devuelve todos los faros
-- *GET* /faros/$idFaro$ -> Devuelve el faro segun idFaro
+- *GET* /faros/faro/$idFaro$ -> Devuelve el faro segun idFaro
+- *GET* /faros/top - > Devuelve el top 5 faros con mayor impresiones
 - *POST* /faros/ -> Crea un faro, usar el archivo FarosJson.json - Ademas, crea un documento comentario con el idFaro como clave secundaria.
+- *PUT* /faros/$idFaro$ -> Registra una nueva impresion
 - *DELETE* /faros/$idFaro$ -> Elimina el faro y su documento comentario relacionado. 
 - *GET* /comentarios/ -> Devuelve todos los documentos de tipo comentario 
 - *GET* /comentarios/$idFaro$ -> Devuelve los comentarios del faro especificado 

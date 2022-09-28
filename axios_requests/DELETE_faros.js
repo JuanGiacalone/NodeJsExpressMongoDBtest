@@ -6,7 +6,7 @@ const host = `http://localhost:${PUERTO}/`
 
 const endpoint = 'faros/'
 
-const idFaro = '25'
+const idFaro = '1'
 
 
 

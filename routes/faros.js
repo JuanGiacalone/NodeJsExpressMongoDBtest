@@ -20,7 +20,7 @@ farosRouter.get('/', async (req, res) => {
 });
 
 // GET para un faro
-farosRouter.get('/:idFaro', async (req, res) => {
+farosRouter.get('faro/:idFaro', async (req, res) => {
   try {
 
     const faro = await faroModel.findOne({idFaro: req.params.idFaro});
@@ -54,6 +54,10 @@ farosRouter.post('/', async (req, res) => {
 
         idFaro: req.body.idFaro,
         nombre: req.body.nombre,
+	      provincia: req.body.provincia,
+	      accesible: req.body.accesible,
+    	  accesoPago: req.body.accesoPago,
+        impresiones:0,
         coordenadas: {type: req.body.coordenadas.type, coordinates: req.body.coordenadas.coordinates},
       })
       
@@ -107,6 +111,46 @@ farosRouter.delete('/:idFaro', async (req, res) => {
 
    }
 } catch (error){ res.json({ messagge: error }) }
+
+})
+farosRouter.put("/:idFaro", async (req,res) => {
+
+  try {
+
+    const faroExiste = await faroModel
+    .findOne({idFaro: req.params.idFaro})
+    .select('idFaro');
+  
+      if(!faroExiste) {
+      res.json({"message": 'No existe faro con idFaro:'+ (req.params.idFaro)})
+      } else {
+        const nuevaImpresion = await faroModel.findOneAndUpdate(
+          {idFaro: req.params.idFaro}, 
+          {$inc: { impresiones: 1}},
+          )
+
+          res.json({ messagge: 'Se agrego una nueva impresion exitosamente'})
+      
+      
+      }
+    
+  } catch (error) {
+    res.json({ messagge: error })
+  }
+
+})
+
+farosRouter.get("/top", async (req,res) => {
+  try {
+
+    const top = await faroModel.find().sort({impresiones: -1}).limit(5).select('idFaro impresiones nombre').exec();
+    
+    res.json(top);
+    
+  } catch (error) {
+    res.json({ messagge: error })
+  }
+
 
 })
 
