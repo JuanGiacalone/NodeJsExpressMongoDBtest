@@ -10,11 +10,11 @@ comentariosRouter.get('/', async (req, res) => {
 
 comentariosRouter.get('/:idFaro', async (req, res) => {
   
-  const comentarios = await comentarioModel.findOne({idFaro: req.params.idFaro})
+
+  let comentarios = await comentarioModel.findOne({idFaro: req.params.idFaro}).select('comentarios')
   
 
   if (comentarios) {
-
     res.send(comentarios) 
   } else {
     res.json({message: "No existe faro con idFaro: " + req.params.idFaro})
@@ -34,7 +34,7 @@ comentariosRouter.put('/:idFaro', async (req, res) => {
       {idFaro: req.params.idFaro}, 
       {$addToSet: {comentarios: req.body.comentarios}},
       {new:true})
-    
+
     if (nuevoComentario) {
         // Ubico el indice del comentario insertado
         const indexUltimoComentario = nuevoComentario.comentarios.length;

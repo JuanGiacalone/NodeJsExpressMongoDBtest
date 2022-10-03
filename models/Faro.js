@@ -22,10 +22,10 @@ const faroSchema = mongoose.Schema({
     historia: String,
     ubicacion: String,
     impresiones: Number,
-    activo: Boolean,
     accesible: Boolean,
     accesoPago: Boolean,
     urlImagen: String,
+    urlVista:String
 }, { versionKey: false})
 
 export const faroModel = mongoose.model('Faro', faroSchema);

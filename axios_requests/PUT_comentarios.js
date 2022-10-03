@@ -12,12 +12,13 @@ const options = {
   method: 'PUT',
   url: host + endpoint + idFaro,
   data: {
-    comentarios: {
+    comentarios: { 
+      idFaro:3,
       fecha: '12/9/2022',
-      nombre: 'JpPablos',
+      nombre: 'JpPablos con idFarosss test',
       email: 'a@a.com',
       cuerpo: 'akslkja;ls;jkldjaksdlkajsjdalkxaklsjdlakjsdlaksmxalksjdalskdjalskdmmxlkmasksajjdsadsajsajsljdsljasjsakjsksadsajkdsajkkjdsalkjdsakjdsakjdsjaksjdk1!!!!kal;skdlka;slaaaaaaaaaaaaaaaaaaaaaaasdwe asd3e     asdawrr asdasdasdasdasd sd d s d!!!a sdasddwasdwawsad'
-    }
+    },
   }
 };
 

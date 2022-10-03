@@ -8,9 +8,14 @@
             -56.79783855759059
         ],
         "type": "Point"
-    }
+    },
    "accesible": true,
-   "accesoPago": true
+   "accesoPago": true,
+   "descripcion": " Esta es la descripcion",
+   "caracteristicas": "Estas son las caracteristicas",
+   "historia": "Esta es la historia",
+   "ubicacion": "Esta es la ubicacion",
+   "urlImagen": "images/1"
 
 }
 {
@@ -22,11 +27,16 @@
             -37.93274290893398, -57.16143765372652
         ],
         "type": "Point"
-    }
+    },
    "accesible": true,
-   "accesoPago": true
-
-},
+   "accesoPago": true,
+   "descripcion": " Esta es la descripcion",
+   "caracteristicas": "Estas son las caracteristicas",
+   "historia": "Esta es la historia",
+   "ubicacion": "Esta es la ubicacion",
+   "urlImagen": "images/1"
+    
+}
 {
     "idFaro": 2,
     "nombre": "Buen Tiempo",
@@ -36,9 +46,14 @@
             -51.31682954207202, -67.74610416388055
         ],
         "type": "Point"
-    }
+    },
    "accesible": true,
-   "accesoPago": true
+   "accesoPago": true,
+   "descripcion": " Esta es la descripcion",
+   "caracteristicas": "Estas son las caracteristicas",
+   "historia": "Esta es la historia",
+   "ubicacion": "Esta es la ubicacion",
+   "urlImagen": "images/1"
 
 }
 {
@@ -50,9 +65,14 @@
             -45.64385725226252, -66.77725854678228
         ],
         "type": "Point"
-    }
+    },
    "accesible": true,
-   "accesoPago": true
+   "accesoPago": true,
+   "descripcion": " Esta es la descripcion",
+   "caracteristicas": "Estas son las caracteristicas",
+   "historia": "Esta es la historia",
+   "ubicacion": "Esta es la ubicacion",
+   "urlImagen": "images/1"
 
 }
 {
@@ -66,7 +86,48 @@
       "type": "Point"
     },
    "accesible": false,
-   "accesoPago": false
+   "accesoPago": false,
+   "descripcion": " Esta es la descripcion",
+   "caracteristicas": "Estas son las caracteristicas",
+   "historia": "Esta es la historia",
+   "ubicacion": "Esta es la ubicacion",
+   "urlImagen": "images/1"
 
+}
+{
+    "idFaro": 5,
+    "nombre": "San Matias",
+    "provincia": "Rio Negro",
+    "coordenadas": {
+        "coordinates": [
+            -40.66813955707734, -64.73063486608498
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": true,
+   "descripcion": " Esta es la descripcion",
+   "caracteristicas": "Estas son las caracteristicas",
+   "historia": "Esta es la historia",
+   "ubicacion": "Esta es la ubicacion",
+   "urlImagen": "images/5"
+}
+{
+    "idFaro": 6,
+    "nombre": "Segunda Barranca",
+    "provincia": "Buenos Aires",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": true,
+   "descripcion": " Esta es la descripcion",
+   "caracteristicas": "Estas son las caracteristicas",
+   "historia": "Esta es la historia",
+   "ubicacion": "Esta es la ubicacion",
+   "urlImagen": "images/6"
 }
 

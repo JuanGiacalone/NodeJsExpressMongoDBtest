@@ -35,49 +35,72 @@ farosRouter.get('faro/:idFaro', async (req, res) => {
   }
 });
 
+farosRouter.post('/batch', async (req,res) => {
+
+  let responses = []
+  for (let index = 0; index < req.body.length; index++) {
+    
+    let response = await saveFaro(req.body[index])
+    responses.push(response)
+  }
+
+  res.json(responses)
+
+})
 // POST - Agregar un faro
 farosRouter.post('/', async (req, res) => { 
 
-    // Verifico que no exista el id faro
-   const faroExiste = await faroModel
-                      .findOne({idFaro: req.body.idFaro})
-                      .select('idFaro');
+  let response = await saveFaro(req.body)
+  
+  res.json(response)
 
-    // Si existe ese idFaro, no se inserta
-    if(faroExiste) { res.json({messagge:'El faro con idFaro: ' + faroExiste.idFaro + ' ya existe!'}) } 
-    else { 
+  //   // Verifico que no exista el id faro
+  //  const faroExiste = await faroModel
+  //                     .findOne({idFaro: req.body.idFaro})
+  //                     .select('idFaro');
+
+  //   // Si existe ese idFaro, no se inserta
+  //   if(faroExiste) { res.json({messagge:'El faro con idFaro: ' + faroExiste.idFaro + ' ya existe!'}) } 
+  //   else { 
     
-      // Se Instancian los modelos y se asignan los campos de la req.
-      // GEOJSON requiere los campos type = Point y coordinates
+  //     // Se Instancian los modelos y se asignan los campos de la req.
+  //     // GEOJSON requiere los campos type = Point y coordinates
 
-      const faro = new faroModel ({
+  //     const faro = new faroModel ({
 
-        idFaro: req.body.idFaro,
-        nombre: req.body.nombre,
-	      provincia: req.body.provincia,
-	      accesible: req.body.accesible,
-    	  accesoPago: req.body.accesoPago,
-        impresiones:0,
-        coordenadas: {type: req.body.coordenadas.type, coordinates: req.body.coordenadas.coordinates},
-      })
-      
-      // Guardado del faro
-      try {
+  //       idFaro: req.body.idFaro,
+  //       nombre: req.body.nombre,
+	// provincia: req.body.provincia,
+	// accesible: req.body.accesible,
+  //   	accesoPago: req.body.accesoPago,
+  //       impresiones:0,
+  //       coordenadas: {type: req.body.coordenadas.type, coordinates: 								req.body.coordenadas.coordinates},
+  //       descripcion: req.body.descripcion,
+  //       caracteristicas: req.body.caracteristicas,
+  //       historia: req.body.historia,
+  //       ubicacion: req.body.ubicacion,
+  //       urlImagen: req.body.urlImagen,
+  //       urlVista: req.body.urlVista
         
-        const savedFaro = await faro.save();
+  //     })
+      
+  //     // Guardado del faro
+  //     try {
+        
+  //       const savedFaro = await faro.save();
 
-        // Si se crea exitosamente, envia el faro guardado y crea un Documento tipo Comentario con los comentarios para ese faro
-        if (savedFaro)  {
-          creaComment(savedFaro.idFaro);
-          res.json(savedFaro)
+  //       // Si se crea exitosamente, envia el faro guardado y crea un Documento tipo Comentario con los comentarios para ese faro
+  //       if (savedFaro)  {
+  //         creaComment(savedFaro.idFaro);
+  //         res.json(savedFaro)
 
-                  // Mensaje segun el exito del guardado
-        } else res.json({messagge:'No se pudo guardar el faro'})
+  //                 // Mensaje segun el exito del guardado
+  //       } else res.json({messagge:'No se pudo guardar el faro'})
 
-      } catch (error) {
-        res.json( { message: error })
-      }
-    } 
+  //     } catch (error) {
+  //       res.json( { message: error })
+  //     }
+  //   } 
   })
 async function creaComment(idFaro) {
   const comentario = new comentarioModel({idFaro: idFaro})
@@ -153,6 +176,58 @@ farosRouter.get("/top", async (req,res) => {
 
 
 })
+
+async function saveFaro (req) { 
+
+  // Verifico que no exista el id faro
+ const faroExiste = await faroModel
+                    .findOne({idFaro: req.idFaro})
+                    .select('idFaro');
+
+
+  // Si existe ese idFaro, no se inserta
+  if(faroExiste) { return ({messagge:'El faro con idFaro: ' + faroExiste.idFaro + ' ya existe!'}) } 
+  else { 
+  
+    // Se Instancian los modelos y se asignan los campos de la req.
+    // GEOJSON requiere los campos type = Point y coordinates
+
+    const faro = new faroModel ({
+
+      idFaro: req.idFaro,
+      nombre: req.nombre,
+      provincia: req.provincia,
+      accesible: req.accesible,
+      accesoPago: req.accesoPago,
+      impresiones:0,
+      coordenadas: {type: req.coordenadas.type, coordinates: req.coordenadas.coordinates},
+      descripcion: req.descripcion,
+      caracteristicas: req.caracteristicas,
+      historia: req.historia,
+      ubicacion: req.ubicacion,
+      urlImagen: req.urlImagen,
+      urlVista: req.urlVista
+      
+    })
+    
+    // Guardado del faro
+    try {
+      
+      const savedFaro = await faro.save();
+
+      // Si se crea exitosamente, envia el faro guardado y crea un Documento tipo Comentario con los comentarios para ese faro
+      if (savedFaro)  {
+        creaComment(savedFaro.idFaro);
+        return (savedFaro)
+
+                // Mensaje segun el exito del guardado
+      } else  return ({messagge:'No se pudo guardar el faro'})
+
+    } catch (error) {
+      return ( { message: error })
+    }
+  } 
+}
 
 
 
