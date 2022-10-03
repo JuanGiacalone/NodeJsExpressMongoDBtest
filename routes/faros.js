@@ -39,7 +39,7 @@ farosRouter.post('/batch', async (req,res) => {
 
   let responses = []
   for (let index = 0; index < req.body.length; index++) {
-    
+
     let response = await saveFaro(req.body[index])
     responses.push(response)
   }
@@ -204,6 +204,7 @@ async function saveFaro (req) {
       descripcion: req.descripcion,
       caracteristicas: req.caracteristicas,
       historia: req.historia,
+      turismo: req.turismo,
       ubicacion: req.ubicacion,
       urlImagen: req.urlImagen,
       urlVista: req.urlVista

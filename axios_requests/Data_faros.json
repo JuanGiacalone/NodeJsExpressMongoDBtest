@@ -1,23 +1,25 @@
+[
 {
     "idFaro": 3,
-    "nombre": "Querandi",
+    "nombre": "Querandí",
     "provincia": "Buenos Aires",
     "coordenadas": {
         "coordinates": [
-            -37.35694403679386,
-            -56.79783855759059
+           -37.46436420243196, 		 		-57.11147958996562
         ],
         "type": "Point"
     },
    "accesible": true,
-   "accesoPago": true,
-   "descripcion": " Esta es la descripcion",
-   "caracteristicas": "Estas son las caracteristicas",
-   "historia": "Esta es la historia",
-   "ubicacion": "Esta es la ubicacion",
-   "urlImagen": "images/1"
+   "accesoPago": false,
+   "descripcion": "El faro de 54 metros de altura se encuentra en una zona medanosa a 30KM de Villa Gessell. Actualmente, habita un sereno.",
+   "caracteristicas": "54 metros de altura, actualmente con franjas negras y blancas",
+   "historia": "El nombre proviene de la punta donde se encuentra, la cual recuerda a los aborígenes del Rio de la Plata.",
+   "turismo": "Se encuentra rodeado de un bosque de coníferas sobre una zona medanosa",
+   "ubicacion": "Se encuentra a 15km del balneario Mar Azul, se puede acceder por la playa. Es parte de la Reserva Natural Faro Querandí",
+   "urlImagen": "http://www.hidro.gov.ar/Balizamiento/Faros/FOTOS/QUERANDI.jpg",
+   "urlVista": "https://www.google.com/maps/embed?pb=!4v1664817074730!6m8!1m7!1sCAoSLEFGMVFpcE4zT1NtWTQtZUhSdFo1OWFrWWpCQ0F1VnZmVU5BdG02ZkVrekxI!2m2!1d-37.4640357!2d-57.1117246!3f140!4f20!5f0.7820865974627469"
 
-}
+},
 {
     "idFaro": 1,
     "nombre": "Punta Mogotes",
@@ -36,7 +38,7 @@
    "ubicacion": "Esta es la ubicacion",
    "urlImagen": "images/1"
     
-}
+},
 {
     "idFaro": 2,
     "nombre": "Buen Tiempo",
@@ -55,7 +57,7 @@
    "ubicacion": "Esta es la ubicacion",
    "urlImagen": "images/1"
 
-}
+},
 {
     "idFaro": 4,
     "nombre": "San Jorge",
@@ -74,7 +76,7 @@
    "ubicacion": "Esta es la ubicacion",
    "urlImagen": "images/1"
 
-}
+},
 {
     "idFaro": 2,
     "nombre": "Punta Norte NOAccesible Gratis",
@@ -93,7 +95,7 @@
    "ubicacion": "Esta es la ubicacion",
    "urlImagen": "images/1"
 
-}
+},
 {
     "idFaro": 5,
     "nombre": "San Matias",
@@ -111,7 +113,7 @@
    "historia": "Esta es la historia",
    "ubicacion": "Esta es la ubicacion",
    "urlImagen": "images/5"
-}
+},
 {
     "idFaro": 6,
     "nombre": "Segunda Barranca",
@@ -130,4 +132,5 @@
    "ubicacion": "Esta es la ubicacion",
    "urlImagen": "images/6"
 }
+]
 

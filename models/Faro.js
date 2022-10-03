@@ -20,6 +20,7 @@ const faroSchema = mongoose.Schema({
     descripcion: String,
     caracteristicas: String,
     historia: String,
+    turismo: String,
     ubicacion: String,
     impresiones: Number,
     accesible: Boolean,
