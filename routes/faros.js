@@ -136,6 +136,50 @@ farosRouter.delete('/:idFaro', async (req, res) => {
 } catch (error){ res.json({ messagge: error }) }
 
 })
+
+// Endpoint para modificar el valor de un campo de cierto faro, idFaro y el campo ingresar por el cuerpo
+// de la peticion
+farosRouter.put('/modificar', async (req,res) => {
+  try {
+    const faroExiste = await faroModel.findOne({ idFaro: req.body.idFaro}).select('idFaro')
+
+    if(!faroExiste) {
+      res.json({"message": 'No existe faro con idFaro: '+ (req.body.idFaro)})
+    } else {
+
+      // Se insertan las entries en un arreglo
+      let arr = Object.entries(req.body)
+      // Se guarda la key que se encuentra en el subarreglo 1, posicion 0
+      let key = arr[1][0]
+      // Se guarda el valor que se encuentra en la posicion 1 del subarreglo
+      let value = arr[1][1]
+
+      // Se realiza la modificacion usando $set key : value
+      const modificaCampo = await faroModel.findOneAndUpdate(
+        {idFaro: req.body.idFaro}, 
+        {$set: {  [key] : value}},
+        { "new": true}
+      ).select(key)
+
+        // Chequea si el campo que se quiere modificar existe, segun la respuesta de la bd
+        // si no existe en la respuesta, no existe el campo
+        // Entonces si existe, respondo existosamente.
+        if(modificaCampo[key]) {
+          res.json({message:'Se modifico el campo: ' + key + ' del faro con idFaro: ' + req.body.idFaro,
+          result: modificaCampo })
+        } else {
+          res.json({ message: 'No existe el campo: ' + key  })
+        }
+
+    }
+
+  } catch (error) {
+    res.json({ messagge: error })
+  }
+})
+
+
+/// Inserta una nueva impresion al faro segun el param idFaro
 farosRouter.put("/:idFaro", async (req,res) => {
 
   try {
