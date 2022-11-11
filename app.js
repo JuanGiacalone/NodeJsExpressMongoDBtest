@@ -65,7 +65,7 @@ app.use('/comentarios',comentariosRouter);
 
 // Endpoint de inicializacion de autenticacion basica, en caso de no existir se acepta un usuario y contrasenia
 // en formato: Basic xxxxxxxx
-app.post('/init', async (req,res) => {
+app.post('/auth-init', async (req,res) => {
 
     // Si no existe un secreto, se acepta el recibido
     if(!secret) {
