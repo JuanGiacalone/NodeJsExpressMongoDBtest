@@ -29,7 +29,7 @@ export var secret = secretPromise.then((response) =>{
         secret = response.secret
         console.log('AUTH -> Running with Secret ✔');
     } else {
-        secret = null
+        secret = undefined
         console.log('AUTH -> Running with no Secret 📛');
     }
 })

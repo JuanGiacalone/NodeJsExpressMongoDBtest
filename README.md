@@ -8,16 +8,16 @@ API Rest con MongoDB - Mongoose y Express / Backend para sitio web turistico de 
 - *GET* /faros/ -> Devuelve todos los faros
 - *GET* /faros/faro/$idFaro$ -> Devuelve el faro segun idFaro
 - *GET* /faros/top - > Devuelve el top 5 faros con mayor impresiones
-- *POST* /faros/ -> Crea un faro, usar el archivo FarosJson.json - Ademas, crea un documento comentario con el idFaro como clave secundaria.
-- *POST* /faros/batch -> Crea multiples faros, enviar como arreglo de objetos: [{faro0}, {faro1}...]
+- *POST* /faros/ -> Crea un faro, usar el archivo FarosJson.json - Ademas, crea un documento comentario con el idFaro como clave secundaria. (Puede requerir Autenticación)
+- *POST* /faros/batch -> Crea multiples faros, enviar como arreglo de objetos: [{faro0}, {faro1}...] (Puede requerir Autenticación)
 - *PUT* /faros/$idFaro$ -> Registra una nueva impresion
-- *PUT* /faros/modificar -> Modifica un campo, el cuerpo a usar: { idFaro: X , campo:valor }
-- *DELETE* /faros/$idFaro$ -> Elimina el faro y su documento comentario relacionado. 
+- *PUT* /faros/modificar -> Modifica un campo, el cuerpo a usar: { idFaro: X , campo:valor } (Puede requerir Autenticación)
+- *DELETE* /faros/$idFaro$ -> Elimina el faro y su documento comentario relacionado. (Puede requerir Autenticación)
 ------------------------------------------------------------------------------------------------------------
 - *GET* /comentarios/ -> Devuelve todos los documentos de tipo comentario 
 - *GET* /comentarios/$idFaro$ -> Devuelve los comentarios del faro especificado 
-- *PUT* /comentarios/$idFaro$ -> Agrega comentarios al documento Comentario del faro indicado 
-- *DELETE* /comentarios/$idFaro$&$idComentario$ -> Elimina un comentario segun idFaro y el idComentario 
+- *PUT* /comentarios/$idFaro$ -> Agrega comentarios al documento Comentario del faro indicado (Puede requerir Autenticación)
+- *DELETE* /comentarios/$idFaro$&$idComentario$ -> Elimina un comentario segun idFaro y el idComentario (Puede requerir Autenticación)
 ## Configuracion local
 1. Clonar
 2. Crear archivo .env con el campo DB_CONNECTION con el valor de la connection string de la base MongoDB a utilizar

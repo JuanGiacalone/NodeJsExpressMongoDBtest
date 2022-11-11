@@ -1,24 +1,32 @@
 import express from 'express';
 const comentariosRouter = express.Router();
 import {comentarioModel} from '../models/Comentario.js'
+import {secret} from '../app.js'
 
 
 
 comentariosRouter.get('/', async (req, res) => {
-  res.send( await comentarioModel.find()) 
+    try {
+        res.send( await comentarioModel.find())
+    } catch (error) {
+        res.send( error )
+    }
+
 });
 
 comentariosRouter.get('/:idFaro', async (req, res) => {
   
+    try {
+        let comentarios = await comentarioModel.findOne({idFaro: req.params.idFaro}).select('comentarios')
+        if (comentarios) {
+            res.send(comentarios)
+        } else {
+            res.json({message: "No existe faro con idFaro: " + req.params.idFaro})
+        }
+    } catch (error) {
+        res.send(error)
+    }
 
-  let comentarios = await comentarioModel.findOne({idFaro: req.params.idFaro}).select('comentarios')
-  
-
-  if (comentarios) {
-    res.send(comentarios) 
-  } else {
-    res.json({message: "No existe faro con idFaro: " + req.params.idFaro})
-  }
 });
 
 
@@ -52,28 +60,33 @@ comentariosRouter.put('/:idFaro', async (req, res) => {
 
 comentariosRouter.delete('/:idFaro&:idComentario', async (req, res) =>{
 
-  try {
+    if (req.headers.authorization === secret) {
 
-    // Se busca el documento comentario correspondiente al idFaro insertado y se hace un pull del Objeto comentario con idComentario
-    const comentario = await comentarioModel
-      .updateOne({ idFaro: req.params.idFaro }, 
-      {$pull: {comentarios: { _id:req.params.idComentario} }});
-    
-    // Si el idFaro no existe, matchedCount es 0. Es la primera parte de la query de updateOne
-    if(!comentario.matchedCount) {res.json({message: 'No existe faro con idFaro: ' + req.params.idFaro + comentario})};
+        try {
 
-    // Si el idFaro es correcto pero el comentario no existe o no es correcto el idComentario ingresado 
-    if(comentario.matchedCount && !comentario.modifiedCount) {
-      res.json({message: 'No existe comentario con id: ' + req.params.idComentario })
-    
-    // Caso de exito...
-    } else {
-      res.json( {message: 'Se elimino el comentario con id: ' + req.params.idComentario })
-    };
+            // Se busca el documento comentario correspondiente al idFaro insertado y se hace un pull del Objeto comentario con idComentario
+            const comentario = await comentarioModel
+            .updateOne({ idFaro: req.params.idFaro },
+                       {$pull: {comentarios: { _id:req.params.idComentario} }});
 
-  } catch (error) {
-    res.json( { message: error })
-  }
+            // Si el idFaro no existe, matchedCount es 0. Es la primera parte de la query de updateOne
+            if(!comentario.matchedCount) {res.json({message: 'No existe faro con idFaro: ' + req.params.idFaro + comentario})};
+
+            // Si el idFaro es correcto pero el comentario no existe o no es correcto el idComentario ingresado
+            if(comentario.matchedCount && !comentario.modifiedCount) {
+                res.json({message: 'No existe comentario con id: ' + req.params.idComentario })
+
+                // Caso de exito...
+            } else {
+                res.json( {message: 'Se elimino el comentario con id: ' + req.params.idComentario })
+            }
+
+        } catch (error) {
+            res.json( { message: error })
+        }
+
+    } else res.json({message: 'Credenciales incorrectas o inexistentes.'})
+
 
 })
 
