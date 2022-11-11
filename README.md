@@ -3,6 +3,8 @@
 API Rest con MongoDB - Mongoose y Express / Backend para sitio web turistico de faros.
 
 ## Endpoints
+- *POST* /init -> Inicializa la autenticacion para la app, enviar en el header autenticacion en modo Basic. Un usuario y contrasenia (La generacion de autenticacion es opcional)
+-------------------------------------------------------------------------------------------------------------
 - *GET* /faros/ -> Devuelve todos los faros
 - *GET* /faros/faro/$idFaro$ -> Devuelve el faro segun idFaro
 - *GET* /faros/top - > Devuelve el top 5 faros con mayor impresiones
