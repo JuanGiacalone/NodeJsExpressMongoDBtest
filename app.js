@@ -23,6 +23,7 @@ const secretPromise = new Promise((resolve,rej) => {
 
 // Una vez resulta la promesa, se almacena el secreto, este puede existir o no. Depende de si se ha inicializado la app
 // utilizando el endpoint /init
+// Se exporta el secreto obtenido para que sea utilizado por las rutas
 export var secret = secretPromise.then((response) =>{
     console.log('AUTH -> SecretPromise solved ✔')
     if(response) {
@@ -63,7 +64,7 @@ app.use('/faros',farosRouter);
 app.use('/comentarios',comentariosRouter);
 
 
-// Endpoint de inicializacion de autenticacion basica, en caso de no existir se acepta un usuario y contrasenia
+// Endpoint de inicializacion de autenticacion basica, en caso de no existir se acepta un usuario y contrasenia usando el header autentication tipo Basic
 // en formato: Basic xxxxxxxx
 app.post('/auth-init', async (req,res) => {
 
