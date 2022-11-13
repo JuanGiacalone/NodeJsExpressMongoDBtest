@@ -1,7 +1,7 @@
 import express from 'express';
 const comentariosRouter = express.Router();
 import {comentarioModel} from '../models/Comentario.js'
-import {secret} from '../app.js'
+import {secret} from './auth.js'
 
 
 
@@ -60,7 +60,7 @@ comentariosRouter.put('/:idFaro', async (req, res) => {
 
 comentariosRouter.delete('/:idFaro&:idComentario', async (req, res) =>{
 
-    if (req.headers.authorization === secret) {
+    if (req.headers.authorization === secret || secret === undefined ) {
 
         try {
 

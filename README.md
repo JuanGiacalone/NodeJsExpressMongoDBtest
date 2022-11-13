@@ -3,11 +3,13 @@
 API Rest con MongoDB - Mongoose y Express / Backend para sitio web turistico de faros.
 
 ## Endpoints
-- *POST* /auth-init -> (Opcional) Inicializa la autenticacion para la app, enviar en el header autenticacion en modo Basic. Un usuario y contrasenia (La generacion de autenticacion es opcional)
+- *POST* /auth/init -> (Opcional) Inicializa la autenticacion para la app, enviar en el header autenticacion en modo Basic. Un usuario y contrasenia (La generacion de autenticacion es opcional)
+- *GET* /auth/refresh -> Refresca el estado del secreto en la aplicacion, realiza consulta a la base de datos.
+- *GET* /auth/reset -> Resetea la autenticacion a el estado inicial, sin secreto. Requiere de autenticacion si es que existe.
 -------------------------------------------------------------------------------------------------------------
 - *GET* /faros/ -> Devuelve todos los faros
 - *GET* /faros/faro/$idFaro$ -> Devuelve el faro segun idFaro
-- *GET* /faros/top - > Devuelve el top 5 faros con mayor impresiones
+- *GET* /faros/top - > Devuelve el top 5 de faros con mayor impresiones
 - *POST* /faros/ -> Crea un faro, usar el archivo FarosJson.json - Ademas, crea un documento comentario con el idFaro como clave secundaria. (Puede requerir Autenticación)
 - *POST* /faros/batch -> Crea multiples faros, enviar como arreglo de objetos: [{faro0}, {faro1}...] (Puede requerir Autenticación)
 - *PUT* /faros/$idFaro$ -> Registra una nueva impresion
@@ -16,7 +18,7 @@ API Rest con MongoDB - Mongoose y Express / Backend para sitio web turistico de 
 ------------------------------------------------------------------------------------------------------------
 - *GET* /comentarios/ -> Devuelve todos los documentos de tipo comentario 
 - *GET* /comentarios/$idFaro$ -> Devuelve los comentarios del faro especificado 
-- *PUT* /comentarios/$idFaro$ -> Agrega comentarios al documento Comentario del faro indicado (Puede requerir Autenticación)
+- *PUT* /comentarios/$idFaro$ -> Agrega comentarios al documento Comentario del faro indicado \
 - *DELETE* /comentarios/$idFaro$&$idComentario$ -> Elimina un comentario segun idFaro y el idComentario (Puede requerir Autenticación)
 ## Configuracion local
 1. Clonar

@@ -9,31 +9,6 @@ import cors from 'cors';
 const PORT = process.env.APP_PORT || 3000;
 const DB = 'farosArg_testv4'
 
-// Se define el modelo para guardar el documento auth
-const Auth = mongoose.model('Auth', { secret: String })
-
-// Se define una promesa a resolver. Realiza una peticion a la base en busqueda del secreto
-const secretPromise = new Promise((resolve,rej) => {
-    setTimeout(() => {
-        resolve(
-            Auth.findOne()
-        )
-        }, 3000);
-})
-
-// Una vez resulta la promesa, se almacena el secreto, este puede existir o no. Depende de si se ha inicializado la app
-// utilizando el endpoint /init
-// Se exporta el secreto obtenido para que sea utilizado por las rutas
-export var secret = secretPromise.then((response) =>{
-    console.log('AUTH -> SecretPromise solved ✔')
-    if(response) {
-        secret = response.secret
-        console.log('AUTH -> Running with Secret ✔');
-    } else {
-        secret = undefined
-        console.log('AUTH -> Running with no Secret 📛');
-    }
-})
 // Instancia de la App
 const app = express();
 
@@ -48,7 +23,7 @@ const app = express();
 // Rutas importadas
 import {farosRouter} from './routes/faros.js'
 import {comentariosRouter} from './routes/comentarios.js'
-
+import {authRouter, secret} from './routes/auth.js'
 
 
 // Middleware parser para los cuerpos q se utilizen
@@ -62,22 +37,8 @@ app.use(cors());
 
 app.use('/faros',farosRouter);
 app.use('/comentarios',comentariosRouter);
+app.use('/auth',authRouter);
 
-
-// Endpoint de inicializacion de autenticacion basica, en caso de no existir se acepta un usuario y contrasenia usando el header autentication tipo Basic
-// en formato: Basic xxxxxxxx
-app.post('/auth-init', async (req,res) => {
-
-    // Si no existe un secreto, se acepta el recibido
-    if(!secret) {
-        const authToSave = new Auth ({secret: req.headers.authorization})
-        await authToSave.save().then(() => res.json({message: 'Auth saved! Write down the sent credentials!'}))
-        secret = req.headers.authorization
-    } else {
-        // Si ya existe se rechaza la solicitud
-            res.json({message: 'The app has already a secret! (Already initialized)'})
-        }
-})
 
 
 // Conexion a BD
