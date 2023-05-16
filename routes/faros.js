@@ -1,6 +1,8 @@
 import express from 'express'
 import { comentarioModel } from '../models/Comentario.js';
+import { publicidadModel } from '../models/Publicidad.js';
 import { eliminaDocComentario } from './comentarios.js';
+import { eliminaDocPublicidad, savePublicidad } from './publicidades.js';
 import { faroModel } from '../models/Faro.js';
 import {secret} from './auth.js'
 const farosRouter = express.Router();
@@ -11,7 +13,11 @@ farosRouter.get('/', async (req, res) => {
 
     // Implementacion de mongoose incluida con sus models
     const faros = await faroModel.find();
-    res.json(faros);
+
+    if (!faros.length)
+      res.json({ "message":'No hay faros cargados.'})
+    else
+      res.json(faros);
 
   } catch (error) {
 
@@ -20,13 +26,13 @@ farosRouter.get('/', async (req, res) => {
 });
 
 // GET para un faro
-farosRouter.get('faro/:idFaro', async (req, res) => {
+farosRouter.get('/faro/:idFaro', async (req, res) => {
   try {
-
+    
     const faro = await faroModel.findOne({idFaro: req.params.idFaro});
 
     // Verifico que exista el faro
-    faro ? res.json(faro) : res.json({"message": 'No existe faro con idFaro:'+ (req.params.idFaro)});
+    faro ? res.json(faro) : res.json({"message": 'No existe faro con idFaro: '+ (req.params.idFaro)+'.'});
 
   } catch (error) {
 
@@ -37,6 +43,7 @@ farosRouter.get('faro/:idFaro', async (req, res) => {
 
 farosRouter.post('/batch', async (req,res) => {
 
+    // El if valida si existe un secreto y si coincide con las credenciales recibidas O Si no existe secreto -> continua.
     if (req.headers.authorization === secret || secret === undefined) {
         let responses = []
         try {
@@ -88,7 +95,7 @@ farosRouter.delete('/:idFaro', async (req, res) => {
             .select('idFaro');
 
             if(!faroExiste) {
-                res.json({"message": 'No existe faro con idFaro:'+ (req.params.idFaro)})
+                res.json({"message": 'No existe faro con idFaro: '+ (req.params.idFaro) + '.'})
             } else {
 
                 // Elimina el faro segun el idFaro ingresado por parametro
@@ -96,12 +103,13 @@ farosRouter.delete('/:idFaro', async (req, res) => {
 
                 // Elimina el comentario segun el idFaro ingresado, se utiliza un metodo del archivo comentarios.js
                 let comentarioAEliminar = await eliminaDocComentario(req.params.idFaro)
-
+                let publicidadAEliminar = await eliminaDocPublicidad(req.params.idFaro)
                 // Si ambos deletedcount son igual a 1, se elimina correctamente el faro; si esto no ocurre, se devuelve el resultado obtenido
-                faroAEliminar.deletedCount && comentarioAEliminar.deletedCount ?
-                res.json( { message:'Se elimino el faro con idFaro: ' + req.params.idFaro + ' y su documento de comentarios'}) :
-                res.json( { message:'DeletedCount del faro: ' + faroAEliminar.deletedCount + ' | DeletedCount del doc. comentario: ' + comentarioAEliminar.deletedCount,
-                    explanation: '1 Significa que se elimino y 0 que no se elimino (puede ser que no exista)'})
+                faroAEliminar.deletedCount && comentarioAEliminar.deletedCount&&publicidadAEliminar.deletedCount ?
+                res.json( { message:'Se elimino el faro con idFaro: ' + req.params.idFaro + ' y sus documentos de comentarios y publicidad'}) :
+                res.json( { message:'DeletedCount del faro: ' + faroAEliminar.deletedCount + ' | DeletedCount del doc. comentario: ' + comentarioAEliminar.deletedCount 
+                          + 'DeletedCount de la publicidad'+ publicidadAEliminar.deletedCount,
+                    explanation: '1 Significa que se elimino y 0 que no se elimino (puede ser que no existia)'})
 
             }
         } catch (error){ res.json({ messagge: error }) }
@@ -142,7 +150,7 @@ farosRouter.put('/modificar', async (req,res) => {
                 // Chequea si el campo que se quiere modificar existe, segun la respuesta de la bd
                 // si no existe en la respuesta, no existe el campo
                 // Entonces si existe, respondo existosamente.
-                if(modificaCampo[key]) {
+                if ( modificaCampo [ key ]) {
                     res.json({message:'Se modifico el campo: ' + key + ' del faro con idFaro: ' + req.body.idFaro,
                         result: modificaCampo })
                 } else {
@@ -151,21 +159,21 @@ farosRouter.put('/modificar', async (req,res) => {
 
             }
 
-        } catch (error) {
+        } catch ( error ) {
             res.json({ messagge: error })
         }
-    } else res.json( {message: 'Credenciales incorrectas o inexistentes.'} )
+    } else res.json( { message: 'Credenciales incorrectas o inexistentes.' } )
 
 })
 
 
 /// Inserta una nueva impresion al faro segun el param idFaro
-farosRouter.put("/:idFaro", async (req,res) => {
+farosRouter.put( "/:idFaro", async (req,res) => {
 
   try {
 
     const faroExiste = await faroModel
-    .findOne({idFaro: req.params.idFaro})
+    .findOne({ idFaro: req.params.idFaro })
     .select('idFaro');
   
       if(!faroExiste) {
@@ -189,9 +197,12 @@ farosRouter.put("/:idFaro", async (req,res) => {
 
 farosRouter.get("/top", async (req,res) => {
   try {
-
+    // Con impresiones -1 ordeno de mayor a menor segun sus impresiones, limit hace traer maximo 5 resultados y select -> selecciono los campo q me interesan.
     const top = await faroModel.find().sort({impresiones: -1}).limit(5).select('idFaro impresiones nombre').exec();
     
+    if (!top.length)
+    res.json({ "message":'No hay faros cargados.'})
+  else
     res.json(top);
     
   } catch (error) {
@@ -202,9 +213,11 @@ farosRouter.get("/top", async (req,res) => {
 })
 
 async function creaComment(idFaro) {
+  
     const comentario = new comentarioModel({idFaro: idFaro})
     return await comentario.save();
 }
+
 
 async function saveFaro (req) { 
 
@@ -215,7 +228,7 @@ async function saveFaro (req) {
 
 
   // Si existe ese idFaro, no se inserta
-  if(faroExiste) { return ({messagge:'El faro con idFaro: ' + faroExiste.idFaro + ' ya existe!'}) } 
+  if(faroExiste) { return ({ messagge:'El faro con idFaro: ' + faroExiste.idFaro + ' ya existe!' }) } 
   else { 
   
     // Se Instancian los modelos y se asignan los campos de la req.
@@ -246,12 +259,14 @@ async function saveFaro (req) {
       const savedFaro = await faro.save();
 
       // Si se crea exitosamente, envia el faro guardado y crea un Documento tipo Comentario con los comentarios para ese faro
+      // Si se crea exitosamente, guarda la publicidad default, envia los datos del faro y un true para que se utilizen los datos default de publicidad
       if (savedFaro)  {
         await creaComment(savedFaro.idFaro);
+        await savePublicidad(savedFaro, true)
         return (savedFaro)
 
                 // Mensaje segun el exito del guardado
-      } else  return ({messagge:'No se pudo guardar el faro'})
+      } else  return ({message:'No se pudo guardar el faro'})
 
     } catch (error) {
       return ( { message: error })

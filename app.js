@@ -7,7 +7,7 @@ import cors from 'cors';
 
 // Seteo de puertos y base a utilizar
 const PORT = process.env.APP_PORT || 3000;
-const DB = 'farosArg_testv4'
+const DB = 'farosArg_01'
 
 // Instancia de la App
 const app = express();
@@ -23,21 +23,23 @@ const app = express();
 // Rutas importadas
 import {farosRouter} from './routes/faros.js'
 import {comentariosRouter} from './routes/comentarios.js'
+import { publicidadesRouter } from './routes/publicidades.js'
 import {authRouter, secret} from './routes/auth.js'
 
 
 // Middleware parser para los cuerpos q se utilizen
 
-app.use(bodyParser.json());
+app.use(bodyParser.json())
 
 // Middleware para poder ejecutar las peticiones desde cualquier sitio usando cors
-app.use(cors());
+app.use(cors())
 
 // Indexacion del middleware para /faros y /comments a su ruta
 
-app.use('/faros',farosRouter);
-app.use('/comentarios',comentariosRouter);
-app.use('/auth',authRouter);
+app.use('/faros',farosRouter)
+app.use('/comentarios',comentariosRouter)
+app.use('/auth',authRouter)
+app.use('/publicidades', publicidadesRouter)
 
 
 
@@ -52,12 +54,12 @@ mongoose.connect(
         serverApi: ServerApiVersion.v1
       }, 
     (err) => {
-        err ?  console.log(err + ' ❌ ') : console.log(`DB -> Connected to ${DB} ✔`,);
+        err ?  console.log(err + ' ❌ ') : console.log(`DB -> Connected to ${DB} ✔`,)
 } )
 
 
 // Configuracion del el puerto de escucha
-app.listen(PORT);
-console.log('APP -> Running on port : '+ PORT + ' ✔');
+app.listen(PORT)
+console.log('APP -> Running on port : '+ PORT + ' ✔')
 
 
