@@ -10,7 +10,7 @@
         "type": "Point"
     },
    "accesible": true,
-   "accesoPago": true,
+   "accesoPago": false,
    "descripcion": " Torre de 35.5 metros con franjas horizontales rojas y blancas, actualmente habitado. ",
    "caracteristicas": "Tiene un luz blanca que produce un destello cada 19 segundos. La habitación del sereno se encuentra al pie del faro.",
    "historia": "Se terminó de construir en el año 1891 sobre terrenos pertenecientes a Jacinto Peralta Ramos. En 1934 fue transformado en radiofaro. Su nombre proviene de la restinga de arena que se encuentra sobre el mar y particularmente de las rocas que la forman llamadas mogotes, esta restinga forma parte del sistema Tandilia.",
@@ -26,7 +26,7 @@
     "provincia": "Buenos Aires",
     "coordenadas": {
         "coordinates": [
-           -37.46436420243196, 		 		-57.11147958996562
+           -37.46436420243196,-57.11147958996562
         ],
         "type": "Point"
     },
@@ -41,22 +41,24 @@
    "urlVista": "https://www.google.com/maps/embed?pb=!4v1664817074730!6m8!1m7!1sCAoSLEFGMVFpcE4zT1NtWTQtZUhSdFo1OWFrWWpCQ0F1VnZmVU5BdG02ZkVrekxI!2m2!1d-37.4640357!2d-57.1117246!3f140!4f20!5f0.7820865974627469"
 },
 {
-    "idFaro": 2,
+    "idFaro": 3,
     "nombre": "Buen Tiempo",
     "provincia": "Santa Cruz",
     "coordenadas": {
         "coordinates": [
-            -51.31682954207202, -67.74610416388055
+            -51.33, -68.57
         ],
         "type": "Point"
     },
    "accesible": true,
-   "accesoPago": true,
-   "descripcion": " Esta es la descripcion",
-   "caracteristicas": "Estas son las caracteristicas",
-   "historia": "Esta es la historia",
+   "accesoPago": false,
+   "descripcion": " El faro se encuentra emplazado sobre el cabo del mismo nombre, que tiene 105 metros de elevación, en la costa norte de Río Gallegos, provincia de Santa Cruz. El faro se encuentra deshabitado.",
+   "caracteristicas": "La construcción es una torre de hierro, con plataforma, barandilla y garita. Está pintada totalmente de negro y alimentada a gas acetileno y con un alcance óptico de 13,7 millas.",
+   "historia": "El encargado de dirigir las obras fue el comandante del buque Balizador A.R.A 'ALFEREZ MACKINLAY', Teniente de Navío Julián Fablet, conjuntamente con 15 personas de la dotación del buque y de la Sección Faros y Balizas. Los trabajos se iniciaron el 20 de febrero de 1917 y fue librado al servicio el 8 de abril de 1917. El faro debe su nombre al cabo donde se encuentra erigido. El nombre de este accidente geográfico proviene de navegantes ingleses quienes lo bautizaron con el nombre de 'Cape Fair Weather'.",
    "ubicacion": "Esta es la ubicacion",
-   "urlImagen": "images/1"
+   "turismo": "Se llega al faro desde la ruta Nacional 3, a la altura del puente sobre el río Gallegos, donde nace la ruta Provincial 55, por donde se recorren aproximadamente 45 km en dirección este, pasando por la Estancia Cabo Buen Tiempo, donde se debe solicitar la autorización correspondiente.",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/BTIEMPO.jpg",
+   "urlVista": "https://httpcats.com/404.jpg"
 
 },
 {
@@ -65,36 +67,40 @@
     "provincia": "Chubut",
     "coordenadas": {
         "coordinates": [
-            -45.64385725226252, -66.77725854678228
+            -45.7788876, -67.379708
         ],
         "type": "Point"
     },
    "accesible": true,
-   "accesoPago": true,
-   "descripcion": " Esta es la descripcion",
+   "accesoPago": false,
+   "descripcion": " El faro no es habitado. Su altura respecto al nivel del mar es de 80 metros. Originariamente su destellador fue alimentado por tubos de gas acetileno que le otorgaron un alcance de 21 millas, pero años después, precisamente el 2 de marzo de 1988, su antigua alimentación fue reemplazada a través de una conexión a la red urbana de la zona, con lo cual su alcance quedó reducido a 13,7 millas.",
    "caracteristicas": "Estas son las caracteristicas",
-   "historia": "Esta es la historia",
-   "ubicacion": "Esta es la ubicacion",
-   "urlImagen": "images/1"
+   "historia": "Los antecedentes de su construcción se remontan al año 1923, cuando se estimó necesario el reemplazo del faro Comodoro Rivadavia, en peligro debido a los constantes desmoronamientos del Cerro Chenque, en esa incipiente localidad. Una vez establecida la nueva ubicación, las tareas de construcción del nuevo faro se sucedieron de inmediato bajo las órdenes del Ingeniero Jorge Rojo. El Presidente Alvear promulgó en Enero de 1924 el decreto estableciendo una reserva de 24 hectáreas de terreno. La empresa YPF se sumó al proyecto mediante la donación en efectivo del tercio del costo total de la obra. La empresa petrolera Astra aportó 160.000 ladrillos y la cal necesaria para la obra. La compañía Ferrocarrilera del Petróleo efectuó sin cargo el transporte de todo el material desde el muelle de Caleta Córdova hasta el lugar de la construcción. El equipo luminoso fué adquirido a la empresa sueca AGA, así como la garita, construída en hierro fundido con techo de cobre. La construcción finalizó el 6 de marzo de 1925, y el faro fué librado al servicio tres días más tarde.",
+   "ubicacion": "Geográficamente, este faro se encuentra instalado en las proximidades del cabo San Jorge, en la ciudad de Comodoro Rivadavia, Provincia del Chubut.",
+   "turismo": "El faro San Jorge puede ser considerado un faro moderno, con una garita importante. En la actualidad esta a cargo de la Municipalidad local (Comodoro Rivadavia) quien realizó un convenio con la Armada Argentina para que los turistas no lo depredaran. Antes estaba en la falda del Cerro Chenque pero se lo debió trasladar, por que el cementerio ubicado allí producía desmoronamientos y su luz se confundía con las de las torres de petróleo. El Radio Club Comodoro Rivadavia (LU2WA) suele activar este faro para el Fin de Semana Internacional de los Faros (ILLW) el tercer fin de semana de Agosto de cada año.",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/SJORGE.jpg",
+   "urlVista": "https://www.google.com/maps/place/Faro+San+Jorge/@-45.7788876,-67.379708,3a,75y,349.51h,91.71t/data=!3m8!1e1!3m6!1sAF1QipO_pIL5sda-rkU8d4_zSm_2L0lZc5-7QWc_84yn!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipO_pIL5sda-rkU8d4_zSm_2L0lZc5-7QWc_84yn%3Dw203-h100-k-no-pi-20-ya186.23187-ro-0-fo100!7i7776!8i3888!4m9!3m8!1s0xbde4f81df0c9200b:0x12177f4f0625292c!8m2!3d-45.7788016!4d-67.3797153!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F12307bvx?entry=ttu#"
 
 },
 {
-    "idFaro": 2,
-    "nombre": "Punta Norte NOAccesible Gratis",
+    "idFaro": 5,
+    "nombre": "Punta Norte",
     "provincia" : "Chubut",
     "coordenadas": {
       "coordinates": [
-        -42.07484804987889, -63.76651582230084
+        -42.0754135, -63.7757046
       ],
       "type": "Point"
     },
-   "accesible": false,
-   "accesoPago": false,
-   "descripcion": " Esta es la descripcion",
-   "caracteristicas": "Estas son las caracteristicas",
-   "historia": "Esta es la historia",
-   "ubicacion": "Esta es la ubicacion",
-   "urlImagen": "images/1"
+   "accesible": true,
+   "accesoPago": false	,
+   "descripcion": "Se encuentra sobre la punta homónima, en península Valdés, provincia del Chubut.Torre con escalera interior para acceso al equipo luminoso. En forma experimental, el 20 de noviembre de 1982 se instaló un nuevo sistema eléctrico de baterías alimentadas por energía eólica, que funcionó hasta fines de 1990, luego reemplazado por otro sistema de paneles solares fotovoltaicos. En la actualidad su alcance luminoso es de 14,3 millas náuticas. Sus rasgos se deben a la necesidad de adaptarse a una la rigurosa meteorología de la Patagonia.",
+   "caracteristicas": "Torre cilíndrica de hierro con plataforma superior, barandilla y garita. Casilla de acumuladores al pie concéntrica con la torre. Pintada a franjas horizonotales negras y blancas alternadas siendo negra la superior. Altura de 16,5 metros.",
+   "historia": "El Servicio de Hidrografía Naval, encomendó al Comandante de la 'Corbeta Uruguay', Tte. de Navío Quihillalt, evaluar una posible localización. El informe fue elevado a principios de Noviembre de 1924, los trabajos se iniciaron en Enero de 1925, y el faro fue puesto en servicio en marzo de ese año. ",
+   "ubicacion": "Se accede al faro recorriendo 72 km desde Puerto Pirámide, por la ruta provincial Nº3 , con dirección noreste.",
+   "turismo": "En el lugar existe una reserva faunística provincial, creada el 29 de septiembre de 1967. Es un apostadero de elefantes y lobos marinos de un pelo, y es un sitio donde se suelen observar orcas atacando a los mamíferos marinos. En el apostadero existe una colonia de unos 3000 lobos marinos, que en épocas de reproducción pueden llegar a tener 1350 crías. ",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/PNORTE.jpg",
+   "urlVista": "https://www.google.com/maps/place/Faro+Punta+Norte/@-42.0754135,-63.7735159,3a,75y,56.95h,103.82t/data=!3m8!1e1!3m6!1sAF1QipO8wNw7sSIP7Ofk2rmP1G7BMJFLpmy3Upufj4eg!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipO8wNw7sSIP7Ofk2rmP1G7BMJFLpmy3Upufj4eg%3Dw203-h100-k-no-pi-10.206379-ya184.09381-ro-0-fo100!7i8000!8i4000!4m7!3m6!1s0xbe1d6853e4ceebf9:0xa6362064bb8d3c92!8m2!3d-42.0754135!4d-63.7735159!10e5!16s%2Fg%2F1xy2s2p1?entry=ttu#"
 
 },
 {
@@ -103,17 +109,19 @@
     "provincia": "Rio Negro",
     "coordenadas": {
         "coordinates": [
-            -40.66813955707734, -64.73063486608498
+            -40.8223322, -64.7196427
         ],
         "type": "Point"
     },
    "accesible": true,
-   "accesoPago": true,
-   "descripcion": " Esta es la descripcion",
-   "caracteristicas": "Estas son las caracteristicas",
-   "historia": "Esta es la historia",
-   "ubicacion": "Esta es la ubicacion",
-   "urlImagen": "images/5"
+   "accesoPago": false,
+   "descripcion": " En la provincia de Río Negro y en el golfo San Matías, se encuentra este faro, que fuera instalado en reemplazo del antiguo faro Villarino a fines de setiembre de 1924. El faro no es habitado.",
+   "caracteristicas": "Su estructura es una torre de hierro, inicialmente alimentada con gas acetileno y con un alcance de 17,5 millas náuticas. En enero de 1983 fue electrificado con paneles solares que modificaron su alcance óptico a 12 millas.",
+   "historia": "Este faro fue instalado en reemplazo del antiguo faro Villarino a fines de setiembre de 1924. Próximo a la ciudad de San Antonio Oeste, fundada a mediados de 1905, es un punto de convergencia de líneas de transporte que surcan los caminos australes del pais. Se destaca como centro de pesca marítima comercial.",
+   "ubicacion": "se encuentra en la costa norte del golfo San Matías, en la zona denominada Saco Viejo en la punta de San Antonio Este",
+   "turismo": "Próximo al faro se encuentra el balneario Las Grutas, localidad que posee una hermosa y muy concurrida playa con suave declive y arenas finas.",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/SMATIAS.jpg",
+   "urlVista": "https://www.google.com/maps/place/Faro+San+Mat%C3%ADas/@-40.8223322,-64.717454,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipNg5LG9tEcyaiwWivE22NtbtUJWB_AkuB9PrZPk!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNg5LG9tEcyaiwWivE22NtbtUJWB_AkuB9PrZPk%3Dw203-h135-k-no!7i6000!8i4000!4m19!1m9!3m8!1s0x95fa22759eeb6fe1:0x8f43405de6ecdf28!2sFaro+San+Mat%C3%ADas!8m2!3d-40.8223322!4d-64.717454!9m1!1b1!16s%2Fg%2F1hbpx359_!3m8!1s0x95fa22759eeb6fe1:0x8f43405de6ecdf28!8m2!3d-40.8223322!4d-64.717454!10e5!14m1!1BCgIgAQ!16s%2Fg%2F1hbpx359_?entry=ttu#"
 },
 {
     "idFaro": 6,
@@ -126,12 +134,855 @@
         "type": "Point"
     },
    "accesible": true,
+   "accesoPago": false,
+   "descripcion": " Se encuentra en la zona comprendida entre Segunda Barranca y Punta Rasa, al Sur de la Provincia de Buenos Aires. El faro se encuentra habitado. ",
+   "caracteristicas": "Originariamente, era una luz blanca con un aparato 'Barbier' de 3er orden. La torre consta de un tubo central y sus patas de menor diámetro, dispuestas en forma exagonal, con garita en la parte superior. Posee equipo de emergencia a gas, que al utilizarlo mantiene su característica luminosa, pero reduce su alcance.",
+   "historia": "En el año 1911, la Dirección de Hidrografía, Faros y Balizas sostuvo la necesidad de construir un faro en el sector comprendido entre Segunda Barranca y punta Rasa. En 1912, los designados jefes de la Sección Faros, Alferez de Fragata Pedro Sánchez Granel y el Ingeniero Maquinista de 1era. (RE) César Caccia, recorrieron aquel tramo de costa y eligieran el lugar más apto para levantar un faro fijo. Después de una minuciosa inspección de la zona, ambos aconsejaron que el faro fuera levantado en las inmediaciones del accidente costero conocido con el nombre de Segunda Barranca. Los trabajos se iniciaron en febrero de 1912, bajo la dirección del Ing. Caccia. En 1914, dos años después, los trabajos finalizaron exitosamente, procediéndose a su encendido el 10 de junio de ese mismo año. La señal recibió el nombre del accidente geográfico donde se encuentra y que fuera impuesto por el piloto español de la Peña en 1795, para diferenciarla de otro accidente más antiguo, llamada Primera Barranca.",
+   "ubicacion": "Se puede llegar por la costa desde Bahía San Blas, 40km aproximadamente o por el balneario 7 de Marzo.",
+   "turismo": "Se encuentra en una zona de dificil acceso para el turista.",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/SBARRANCA.jpg",
+   "urlVista": "https://www.google.com/maps/place/Faro+Segunda+Barranca/@-40.775421,-62.2736778,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipO2v9ZG_wo8SxXJc-WjY69BuM8Qb_RtyjLK4AOk!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipO2v9ZG_wo8SxXJc-WjY69BuM8Qb_RtyjLK4AOk%3Dw203-h183-k-no!7i6500!8i5888!4m18!1m8!3m7!1s0x95f44ff754b81eb7:0x886aca9dbfb0a7ab!2sFaro+Segunda+Barranca!8m2!3d-40.775421!4d-62.2736778!10e4!16s%2Fg%2F1xy2_xvr!3m8!1s0x95f44ff754b81eb7:0x886aca9dbfb0a7ab!8m2!3d-40.775421!4d-62.2736778!10e5!14m1!1BCgwKCC9tLzA1aDBuMAE!16s%2Fg%2F1xy2_xvr?entry=ttu#"
+},
+{
+    "idFaro": 7,
+    "nombre": "Punta Médanos",
+    "provincia": "Buenos Aires",
+    "coordenadas": {
+        "coordinates": [
+            -36.8829785, -56.6771297
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
    "accesoPago": true,
-   "descripcion": " Esta es la descripcion",
-   "caracteristicas": "Estas son las caracteristicas",
-   "historia": "Esta es la historia",
-   "ubicacion": "Esta es la ubicacion",
-   "urlImagen": "images/6"
+   "descripcion": "Se encuentra en la provincia de Buenos Aires, partido de la Costa, a 0,6 millas al SW de Punta Médanos. Su localización marca la culminación sur del cabo de San Antonio, lugar en el que muchos naufragios habían tenido lugar hasta el momento de su señalización. Se trata de un tubo central rodeado de un trípode de patas cilíndricas , con garita superior y casa. Es eléctrico y con equipo de emergencia a gas con alcance reducido. Este faro se encuentra habitado.",
+   "caracteristicas": "Torre metálica troncopiramidal y garita con franjas horizontales rojas y blancas. Casa al pie. Altura 59 metros.",
+   "historia": "El nombre propuesto para el faro se debe a la punta homónima, donde fue erigido, accidente geográfico descubierto por la expedición de Magallanes el 7 de febrero de 1520 y bautizado como cabo Santa Polonia. El actual Médanos se detectó por primera vez en la carta de Lángara de 1798, pero con la actual posición de punta Querandí. Posteriormente, en 1820 se transfirió ese nombre al extremo sur del cabo San Antonio.Su construcción fue encargada a la empresa Barbier, Bernard & Turenne, en París, Francia, en 1890, donde fue ensamblado en fábrica y posteriormente enviado desarmado a Buenos Aires. Su armado e instalación final fue responsabilidad de los empresarios Torres y Sturiza.",
+   "ubicacion": "Se encuentra en el extremo meridional del cabo San Antonio y el lugar que se encuentra en el punto más oriental de la Costa Argentina continental. Se halla ubicada a orillas del mar Argentino del océano Atlántico. ",
+   "turismo": "El faro se encuentra ubicado sobre la ruta 11, entre las localidades de Mar de Ajó y Pinamar. El acceso al faro es abierto al público. En sus instalaciones existe un museo que cuenta con interesantes objetos y fotos de este centenario faro. Al visitarlo, pueden recorrerse las agrestes y amplias playas que lo rodean, rodeados de médanos de considerable altura.",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/MEDANOS.jpg",
+   "urlVista": "https://www.google.com/maps/place/Faro+Punta+M%C3%A9danos/@-36.8840373,-56.678021,3a,47.7y,59.47h,98.48t/data=!3m8!1e1!3m6!1sAF1QipMleouGGSJJ4yngUpPtKacx3YPgvpLiogmBLKQA!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMleouGGSJJ4yngUpPtKacx3YPgvpLiogmBLKQA%3Dw203-h100-k-no-pi-20-ya345-ro-0-fo100!7i8704!8i4352!4m9!3m8!1s0x959c89de58c621e9:0xe087d4b3267637f3!8m2!3d-36.8829785!4d-56.674941!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F155r9jtz?entry=ttu#"
+},
+{
+    "idFaro": 8,
+    "nombre": "San Antonio",
+    "provincia": "Buenos Aires",
+    "coordenadas": {
+        "coordinates": [
+            -36.3064904, -56.7747906
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": true,
+   "descripcion": "Se encuentra en el partido de General Lavalle, provincia de Buenos Aires. El cabo San Antonio, de quien recibe el nombre y sobre el cual se erige, es una prominencia de tierra que termina casi en ángulo recto, en un sector llamado 'Frontón del cabo San Antonio'. Este faro se encuentra habitado.",
+   "caracteristicas": "Se trata de una torre metálica tipo trípode o tronco piramidal. Si bien es eléctrico, en el balcón ha sido colocada una linterna a gas, para uso de emergencia, de una potencia de 900 candelas con alcance luminoso de 9 millas. Su elevación sobre el nivel del mar es de 63 metros y su alcance nominal de 28 millas náuticas.",
+   "historia": "Los trabajos para su construcción se iniciaron en 1891. Finalizaron al año siguiente y el 1 de enero de 1892 fue librado al servicio.",
+   "ubicacion": "Se encuentra dentro del parque tematico 'Termas Marinas Park'",
+   "turismo": "El predio del faro está rodeado por dos centros turísticos de la costa: las Termas Marinas y Mundo Marino. Las Termas se encuentran dentro de Bahía Aventura, un parque temático de esparcimiento, que pone al turista en contacto con la naturaleza. Aquí, desde el faro, se puede ascender hasta su equipo de iluminación por un ascensor panorámico que permite admirar el maravilloso paisaje de la zona, tal como punta Rasa, donde se da el curioso fenómeno de la salida del sol sobre el mar y su puesta sobre el río. Sucede sobre la gran lengua de arena que se ienterna en el agua para convertirse en el extremo sur de bahía Samborombón, donde se confunden el río con el mar. Aquí se encuentra la Estación Biológica 'Punta Rasa' que alverga millares de aves migratorias que llegan desde América del Norte y la Patagonia. A su vez, Mundo Marino abarca 17 ha y es el oceanario más grande de América del Sur. Según algunos lugareños, por el momento el ascensor interno se encuentra fuera de servicio.",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/ANTONIO.jpg",
+   "urlVista": "https://www.google.com/maps/place/Faro+San+Antonio/@-36.3063765,-56.7731072,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMHbT3xPod-BSuYypsRar0-WtwD6tMebykXpdWQ!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMHbT3xPod-BSuYypsRar0-WtwD6tMebykXpdWQ%3Dw86-h191-k-no!7i1468!8i3264!4m16!1m8!3m7!1s0x959c0336b56b068d:0x26af38ebd28bcbd3!2sTermas+Marinas+Park!8m2!3d-36.3084783!4d-56.7709408!10e5!16s%2Fg%2F11bx893zbn!3m6!1s0x959c039625991b0f:0x5691cbde80b1bb92!8m2!3d-36.3063765!4d-56.7731072!10e5!16s%2Fg%2F11q_ldr0t7?entry=ttu#"
+},
+{
+    "idFaro": 9,
+    "nombre": "Primero de Mayo",
+    "provincia": "Antártida Argentina",
+    "coordenadas": {
+        "coordinates": [
+            -64.285833, -62.9675
+        ],
+        "type": "Point"
+    },
+   "accesible": false,
+   "accesoPago": false,
+   "descripcion": "Sucesivas campañas de verano permitieron realizar mantenimiento de su estructura y sistema luminoso. De esta manera, en el año 1956 debió cambiarse de ubicación la casilla de acumuladores de acetileno, ya que en la zona presentaba una elevada cantidad de hielo que dificultaba su funcionamiento.",
+   "caracteristicas": "El faro Primero De Mayo posee un alcance de 4,9 millas náuticas. En la Campaña Antártica de Verano 2000-2001 se instaló el equipo energético a base de pilas secas renovables cada dos años.",
+   "historia": "La señal fue construida durante la Campaña Antártica de Verano 1941/1942. Fue librada al servicio el 1 de marzo de 1942, con el fin de brindar un mejor avistaje a los buques que se aproximaban desde el norte, para realizar aprovisionamientos en el Destacamento Naval Melchior. Es el primer faro luminoso argentino instalado en el extremo E de la isla 1º de Mayo, en el año 1942. Fue Declarado Momumento Histórico Nro. 29 del Sistema del Tratado Antártico.",
+   "ubicacion": "Se encuentra en el archipiélago Melchior, entre las grandes islas Amberes y Brabante, pertenecientes ambas al archipiélago de Palmer, en el Sector Antártico Argentino.",
+   "turismo": "El turismo es muy limitado debido a su remota ubicacion en el Antártico Argentino",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/PMAYO.jpg",
+   "urlVista": "https://upload.wikimedia.org/wikipedia/commons/7/7f/ArchipelMelchior_03.jpg"
+},
+{
+    "idFaro": 10,
+    "nombre": "Almirante Brown",
+    "provincia": "Chubut",
+    "coordenadas": {
+        "coordinates": [
+            -42.2175579, -64.2595748
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": "El faro Almirante Brown, cuyo nombre nos recuerda al buque del mismo nombre, se encuentra en el golfo San Matias, provincia del Chubut. El faro no es habitado.",
+   "caracteristicas": "El faro originalmente, funcionó con un equipo luminoso alimentado por una fuente de acumuladores de gas acetileno, que le daba un alcance de 15,3 millas. Posteriormente, fue modernizado siguiendo las tendencias mundiales en materia de señalizaciones marítimas, por lo cual se procedió a cambiarlo por un equipo fotovoltaico de paneles solares y baterías, lográndose un alcance nominal de 10,2 millas náuticas. El faro consiste en una torre cuadrangular de hormigón armado que tiene una altura de 5 metros. La cara orientada hacia el mar está pintada a franjas horizontales rojas y blancas con un cuadrado rojo en el centro.",
+   "historia": "Antes de la construcción de este faro, existió una baliza de madera que instaló personal del cañonero ARA 'Independencia' como referencia para la práctica de tiro naval.",
+   "ubicacion": "No muy lejos de la Reserva Natural Turística Isla de los Pájaros, de gran valor biológico.",
+   "turismo": "Poca información, realiza tu aporte en los comentarios!",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/ABROWN.jpg",
+   "urlVista": "https://www.google.com/maps/place/Faro+Almirante+Brown/@-42.2388184,-64.2179262,18402m/data=!3m1!1e3!4m6!3m5!1s0xbe02b3e87868101d:0x5a524e9083280809!8m2!3d-42.2176553!4d-64.2579831!16s%2Fg%2F1235kmyb?entry=ttu"
+},
+{
+    "idFaro": 11,
+    "nombre": "Año Nuevo",
+    "provincia": "Tierra del Fuego",
+    "coordenadas": {
+        "coordinates": [
+            -54.6580696, -64.1345412
+        ],
+        "type": "Point"	
+    },
+   "accesible": false,
+   "accesoPago": false,
+   "descripcion": "Se trata de una de las señales de mayor inaccesibilidad, ya que se encuentra sobre una elevación de terreno de aproximadamente 24 metros y a unos 600 metros de la costa donde varaban las lanchas que transportaban los tubos de acetileno que proporcionaban la energía lumínica.",
+   "caracteristicas": "La torre del faro es una estructura troncocónica de franjas horizontales negras y blancas, con una casa habitación al pie, de 23,5 metros de altura.",
+   "historia": "El 25 de abril de 1985 fue electrificado por medio de paneles solares lo que dio como resultado un alcance luminoso de 12,8 millas náuticas.La construcción estuvo a cargo de la firma francesa: 'Barbier & Bernard'. Fue declarado 'Monumento Histórico Nacional', según el Decreto Nro. 64/99 del Poder Ejecutivo, en el año 1999 y a raíz de ahí se restauró integralmente.",
+   "ubicacion": "El archipiélago de Año Nuevo está ubicado al norte de la isla de los Estados. Integra parte del departamento de Ushuaia, en la provincia de Tierra del Fuego, Antártica e Islas del Atlántico Sur. Este archipiélago constituye una formación rocosa de islotes, formado por cinco islas, las cuales son: Observatorio, Elizalde, Zeballos, Goffré y el islote Gutiérrez. Todas estas islas son bajas, con costas rocosas y bordeadas de arrecifes.",
+   "turismo": "El faro está en la Isla Observatorio y no hay embarcación que llegue hasta allí.",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/ANUEVO.jpg",
+   "urlVista": "https://www.google.com/maps/place/Faro+A%C3%B1o+Nuevo/@-54.6580696,-64.1323525,3a,88.2y,90t/data=!3m8!1e2!3m6!1sAF1QipOKAmrdkEffiMIIFb6MsmVE6saH3cutI18VnYWN!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOKAmrdkEffiMIIFb6MsmVE6saH3cutI18VnYWN%3Dw128-h86-k-no!7i1045!8i700!4m7!3m6!1s0xbc365b0e6643dbe1:0x75540aa84013db8e!8m2!3d-54.6580696!4d-64.1323525!10e5!16s%2Fg%2F11smzmc9hc?entry=ttu#"
+},
+{
+    "idFaro": 12,
+    "nombre": "Beauvoir",
+    "provincia": "Santa Cruz",
+    "coordenadas": {
+        "coordinates": [
+            -47.7529005, -65.900083
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " El faro Beauvoir se encuentra ubicado sobre la torre de la Iglesia Nuestra Señora de la Guardia, en la ciudad de Puerto Deseado, provincia de Santa Cruz. El faro no se encuentra habitado. ",
+   "caracteristicas": "Es un Faro giratorio conectado a la red de electricidad urbana de la iglesia y cuyo alcance es de 19 millas. La altura de la torre es de 27 metros.",
+   "historia": "Fue inaugurado el día 23 de octubre de 1980, debido a la necesidad de contar con una señal que ocasionalmente reemplazara al faro Pingüino, el cual, por encontrarse en una isla de difícil acceso, pudiera apagarse en alguna eventualidad. Por tal motivo, y a propuesta del entonces jefe del Distrito Balizamiento Puerto Deseado, Teniente de Fragata (R.S.) Ricardo Roberto Locarnini, el Padre Zucarello, de la congragación Salesiana, dio su consentimiento para erigir éste faro en la parte superior de la torre de la iglesia Nuestra Señora de la Guardia. Este faro lleva su nombre en recordación al sacerdote salesiano José María Beauvoir, de incesante actividad religiosa y un gran estudioso de las culturas patagónicas. En 1892, recorre a caballo la Isla Grande de Tierra del Fuego acompañando a Monseñor Fagnano para ubicar el lugar donde se construiría la Misión Salesiana La Candelaria, al norte del Río Grande. Publica en 1915 el Diccionario Shelknam (ona) y el Diccionario Tehuelche.",
+   "ubicacion": "El faro Beauvoir se encuentra ubicado sobre la torre de la Iglesia Nuestra Señora de la Guardia, en la ciudad de Puerto Deseado, provincia de Santa Cruz. El faro no se encuentra habitado.",
+   "turismo": "Puerto Deseado fue colonizado en 1884. Es conocida por la pesca deportiva y porque su puerto sirve de atraque para buques de gran calado. Hay interesantes eventos, excursiones y paseos atractivos para el turismo.",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/BEAUVOIR.jpg",	
+   "urlVista": "https://www.google.com/maps/place/Faro+Beauvoir/@-47.7529032,-65.8924524,3a,75y,256.22h,110.88t/data=!3m7!1e1!3m5!1s-8kc-SOLNV_AvSb4NqqvNQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3D-8kc-SOLNV_AvSb4NqqvNQ%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D264.20108%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656!4m9!3m8!1s0xbddd9ff2dfcc5961:0x60c2fda8bea29e51!8m2!3d-47.7529005!4d-65.8927228!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F1215jcy1?entry=ttu#"
+},
+{
+    "idFaro": 13,
+    "nombre": "Buen Suceso",
+    "provincia": "Tierra del Fuego",
+    "coordenadas": {
+        "coordinates": [
+             -54.49, -65.13
+
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": "Se encuentra en el extremo sur de la provincia Tierra del Fuego, Antártida e islas del Atlántico Sur en la costa sur de la bahía del mismo nombre, frente al estrecho de Le Maire. El faro se encuentra deshabitado",
+   "caracteristicas": "El 1° de febrero de 1985 se le reemplazó la fuente de alimentación por una base de paneles solares y baterías fotovoltaicas que le dan un alcance óptico de 8,9 millas. En 1918 debido a fallas estructurales, fue reemplazado por una torre nueva. El día 9 de diciembre de 1928 quedó librado al servicio público, alimentado por gas acetileno.",
+   "historia": "La construcción estuvo bajo la supervisión del comandante del Balizador A.R.A. 'ALFEREZ MACKINLAY', Teniente de Navío Ramón Poch. Los trabajos se iniciaron el 3 de noviembre de 1916, siendo librado al servicio el 8 de noviembre de 1916. Dos años más tarde, y debido a fallas estructurales, fue reemplazado por una torre nueva, tarea realizada por 12 hombres de la Sección Faros, a cargo del Teniente de Navío Carlos Sciurano. El día 9 de diciembre de 1928 quedó librado al servicio público.",
+   "ubicacion": "La bahía Buen Suceso es una profunda entrada de 2,15 millas de ancho que se abre hacia el W en forma de 'V' profunda, truncada al fondo por una amplia playa de arena, rodeada por montañas de regular altura, que brindan protección a los buques en el fondeadero. El cabo Buen Suceso es una excelente referencia para el navegante.",
+   "turismo": "Poca información, realiza tu aporte en los comentarios!",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/BSUCESO.jpg",
+   "urlVista": "https://www.google.com/maps/@-54.80239,-65.2693292,935m/data=!3m1!1e3?entry=ttu"
+},
+{
+    "idFaro": 14,
+    "nombre": "Cabo Aristizabal",
+    "provincia": "Chubut",
+    "coordenadas": {
+        "coordinates": [
+            -45.21605169540715, -66.5280288973963
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": "El faro Cabo Aristizábal se encuentra en el extremo norte del golfo San Jorge, en la provincia del Chubut. El faro se encuentra deshabitado",
+   "caracteristicas": "Presenta un alcance óptico de 10,7 millas náuticas. Desde el 8 de diciembre de 1984 se encuentra alimentado por paneles solares y baterías fotovoltaicas.",
+   "historia": "Los trabajos de construcción se iniciaron el 11 de junio de 1917 y se libró al servicio el 17 de junio del mismo año. Durante 1977, y como consecuencia de la necesidad de aumentar su alcancee óptico, se decidió la construcción de una nueva torre. Se instaló entonces una nueva linterna de alcancee mayor a la inicial y que permitió incrementar la señal nocturna.",
+   "ubicacion": "El faro Cabo Aristizábal se encuentra en el extremo norte del golfo San Jorge, en la provincia del Chubut. El faro se encuentra deshabitado",
+   "turismo": "El faro está próximo a bahía Bustamante de donde provienen la mayoría de las algas marinas que se exportan o industrializan en el país. El campamento de recolectores de algas puede visitarse con permiso previo.",
+   "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/ARISTIZABAL.jpg",
+   "urlVista": "https://www.google.com/maps/place/Faro+Cabo+Aristiz%C3%A1bal/@-45.2160371,-66.5284447,186m/data=!3m1!1e3!4m6!3m5!1s0xbde33eaa925838f9:0xab7ee960aa7355ba!8m2!3d-45.2162111!4d-66.5277548!16s%2Fg%2F11tcy5003f?entry=ttu"
+},
+{
+    "idFaro": 15,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 16,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 17,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 18,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 19,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 20,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 21,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 22,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 23,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 24,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 25,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 26,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 27,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 28,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 29,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 30,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 31,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 32,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 33,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 34,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 35,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 36,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 37,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 38,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 39,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 40,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 41,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 42,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 43,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 44,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 45,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 46,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 47,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
+},
+{
+    "idFaro": 48,
+    "nombre": "",
+    "provincia": "",
+    "coordenadas": {
+        "coordinates": [
+            -40.73418955795128, -62.28007671825344
+        ],
+        "type": "Point"
+    },
+   "accesible": true,
+   "accesoPago": false,
+   "descripcion": " ",
+   "caracteristicas": "",
+   "historia": "",
+   "ubicacion": "",
+   "turismo": "",
+   "urlImagen": "",
+   "urlVista": ""
 },
 
 ]
