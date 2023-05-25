@@ -98,7 +98,8 @@ export async function savePublicidad (req, def) {
             idFaro: req.idFaro,
             nombre: req.nombre,
             descripcion: req.descripcion,
-            url: req.url,
+            urlUbicacion: req.urlUbicacion,
+            urlSitio: req.urlSitio,
             creada: new Date()
           })
     } else {
@@ -107,7 +108,8 @@ export async function savePublicidad (req, def) {
             idFaro: req.idFaro,
             nombre: publicidadDefault.nombre,
             descripcion: publicidadDefault.descripcion,
-            url: publicidadDefault.url,
+            urlUbicacion: publicidadDefault.urlUbicacion,
+            urlSitio: publicidadDefault.urlSitio,
             creada: new Date()
           })
     }

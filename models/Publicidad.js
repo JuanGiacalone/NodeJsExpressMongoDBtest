@@ -10,7 +10,8 @@ const publicidadSchema = mongoose.Schema({
 
   nombre: String,
   descripcion: String,
-  url:String,
+  urlUbicacion: String,
+  urlSitio: String,
   creada:Date, 
   },{ versionKey: false });
 

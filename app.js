@@ -23,7 +23,7 @@ const app = express();
 // Rutas importadas
 import {farosRouter} from './routes/faros.js'
 import {comentariosRouter} from './routes/comentarios.js'
-import { publicidadesRouter } from './routes/publicidades.js'
+import {publicidadesRouter } from './routes/publicidades.js'
 import {authRouter, secret} from './routes/auth.js'
 
 
