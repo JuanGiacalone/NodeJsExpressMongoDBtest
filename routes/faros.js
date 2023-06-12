@@ -15,7 +15,7 @@ farosRouter.get('/', async (req, res) => {
     const faros = await faroModel.find();
 
     if (!faros.length)
-      res.json({ "message":'No hay faros cargados.'})
+      res.json({ message: 'No hay faros cargados.'})
     else
       res.json(faros);
 
@@ -27,18 +27,23 @@ farosRouter.get('/', async (req, res) => {
 
 // GET para un faro
 farosRouter.get('/faro/:idFaro', async (req, res) => {
-  try {
-    
-    const faro = await faroModel.findOne({idFaro: req.params.idFaro});
+  
+    try {
+      
+      const faro = await faroModel.findOne({idFaro: req.params.idFaro});
 
-    // Verifico que exista el faro
-    faro ? res.json(faro) : res.json({"message": 'No existe faro con idFaro: '+ (req.params.idFaro)+'.'});
+      // Verifico que exista el faro
+      faro ? res.json(faro) : res.json({ message: 'No existe faro con idFaro: '+ (req.params.idFaro)+'.'});
 
-  } catch (error) {
+    } catch (error) {
 
-    res.json( { message: error })
+      res.json( { message: error })
+      }
 
-  }
+});
+
+farosRouter.get('/faro/', async (req, res) => {
+  res.json({message: 'Utilizar un idFaro para la consulta, por ejemplo: /faros/faro/12 '})
 });
 
 farosRouter.post('/batch', async (req,res) => {
@@ -58,7 +63,7 @@ farosRouter.post('/batch', async (req,res) => {
                 res.json(responses)
         }
         catch (error) {
-            res.json({message: 'Existe un problema en el body de la request, leer documentacion.'})
+            res.json({message: 'Existe un problema en el body de la request, leer documentacion.', "error": error})
         }
 
     } else {
@@ -80,7 +85,7 @@ farosRouter.post('/', async (req, res) => {
         } catch (error) {
             res.json({message: 'Existe un problema en el body de la request, leer documentacion.'})
         }
-    } else res.json( {message: 'Credenciales incorrectas o inexistentes.'} )
+    } else res.json({message: 'Credenciales incorrectas o inexistentes.'})
 
   })
 
@@ -95,7 +100,7 @@ farosRouter.delete('/:idFaro', async (req, res) => {
             .select('idFaro');
 
             if(!faroExiste) {
-                res.json({"message": 'No existe faro con idFaro: '+ (req.params.idFaro) + '.'})
+                res.json({message: 'No existe faro con idFaro: '+ (req.params.idFaro) + '.'})
             } else {
 
                 // Elimina el faro segun el idFaro ingresado por parametro
@@ -130,7 +135,7 @@ farosRouter.put('/modificar', async (req,res) => {
             const faroExiste = await faroModel.findOne({ idFaro: req.body.idFaro}).select('idFaro')
 
             if(!faroExiste) {
-                res.json({"message": 'No existe faro con idFaro: '+ (req.body.idFaro)})
+                res.json({message: 'No existe faro con idFaro: '+ (req.body.idFaro)})
             } else {
 
                 // Se insertan las entries en un arreglo
@@ -177,7 +182,7 @@ farosRouter.put( "/:idFaro", async (req,res) => {
     .select('idFaro');
   
       if(!faroExiste) {
-      res.json({"message": 'No existe faro con idFaro:'+ (req.params.idFaro)})
+      res.json({ message: 'No existe faro con idFaro:'+ (req.params.idFaro)})
       } else {
         const nuevaImpresion = await faroModel.findOneAndUpdate(
           {idFaro: req.params.idFaro}, 
@@ -201,7 +206,7 @@ farosRouter.get("/top", async (req,res) => {
     const top = await faroModel.find().sort({impresiones: -1}).limit(5).select('idFaro impresiones nombre').exec();
     
     if (!top.length)
-    res.json({ "message":'No hay faros cargados.'})
+    res.json({ message:'No hay faros cargados.'})
   else
     res.json(top);
     
@@ -266,7 +271,7 @@ async function saveFaro (req) {
         return (savedFaro)
 
                 // Mensaje segun el exito del guardado
-      } else  return ({message:'No se pudo guardar el faro'})
+      } else  return ({message: 'No se pudo guardar el faro'})
 
     } catch (error) {
       return ( { message: error })

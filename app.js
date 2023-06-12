@@ -7,16 +7,15 @@ import cors from 'cors';
 
 // Seteo de puertos y base a utilizar
 const PORT = process.env.APP_PORT || 3000;
-const DB = 'farosArg_01'
+const DB =  process.env.DB_NAME || 'farosArg_01'
 
 // Instancia de la App
 const app = express();
 
-// Middleware -> se ejecutan cuando se hace una pegada a cierta ruta
-// En este caso se ejecutara una funcion cuando se solicite /faros
-// app.use('/faros', () => {
-//     console.log('middleware');
-// } )
+
+// Configuracion de variables para aceptar requests de gran tamanio (Faros por Batch)
+app.use(express.json({limit: '50mb', extended: true}))
+app.use(express.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
 
 // app.use(auth)... en este caso al usar cualquier ruta, se realiza un auth..
 
@@ -54,12 +53,12 @@ mongoose.connect(
         serverApi: ServerApiVersion.v1
       }, 
     (err) => {
-        err ?  console.log(err + ' ❌ ') : console.log(`DB -> Connected to ${DB} ✔`,)
+        err ?  console.log(err + ' ❌ ') : console.log( `DB -> Conexión exitosa a la base ${DB} ✔`,)
 } )
 
 
 // Configuracion del el puerto de escucha
 app.listen(PORT)
-console.log('APP -> Running on port : '+ PORT + ' ✔')
+console.log( `APP -> Ejecutandose en el puerto : ${PORT} ✔`)
 
 

@@ -18,13 +18,13 @@ const secretPromise = new Promise((resolve,rej) => {
 // utilizando el endpoint /init
 // Se exporta el secreto obtenido para que sea utilizado por las rutas
 var secret = secretPromise.then((response) =>{
-    console.log('AUTH -> SecretPromise solved ✔')
+    console.log('AUTH -> Se resolvió la promesa de autenticación exitosamente ✔')
     if(response) {
         secret = response.secret
-        console.log('AUTH -> Running with Secret ✔');
+        console.log('AUTH -> Ejecutandosé con credenciales administrativas ✔');
     } else {
         secret = undefined
-        console.log('AUTH -> Running with no Secret 📛');
+        console.log('AUTH -> Ejecutandosé sin credenciales administrativas 📛');
     }
 })
 
@@ -35,18 +35,18 @@ authRouter.post('/init', async (req,res) => {
     // Si no existe un secreto, se acepta el recibido
     if(!secret) {
         const authToSave = new Auth ({secret: req.headers.authorization})
-        await authToSave.save().then(() => res.json({message: 'Auth saved! Write down the sent credentials!'}))
+        await authToSave.save().then(() => res.json({message: 'Autenticación configurada, guardar las credenciales enviadas'}))
         secret = req.headers.authorization
-        console.log('AUTH -> Auth just added, now running with a Secret ✔');
+        console.log('AUTH -> Se configuro una nueva Autenticacion ✔');
     } else {
         // Si ya existe se rechaza la solicitud
-        res.json({message: 'The app has already a secret! (Already initialized)'})
+        res.json({message: 'La aplicación ya cuenta con credenciales administrativas (Ya fue inicializada la autenticacion.)'})
     }
 })
 
 authRouter.get('/refresh', async (req,res) => {
 
-    console.log('AUTH -> Refreshing auth...')
+    console.log('Refrescando el estado de la autenticación...')
     try {
         let refreshSecretPromise = new Promise((resolve,rej) => {
             setTimeout(() => {
@@ -58,17 +58,17 @@ authRouter.get('/refresh', async (req,res) => {
 
          refreshSecretPromise.then((response) =>{
 
-            console.log('AUTH -> RefreshSecretPromise solved ✔')
+            console.log('AUTH -> Promesa de refresco finalizada exitosamente ✔')
             if(response) {
                 secret = response.secret
-                console.log('AUTH -> Running with Secret ✔');
+                console.log('AUTH -> Aplicación corriendo con autenticacion ✔');
             } else {
                 secret = undefined
-                console.log('AUTH -> Running with no Secret 📛');
+                console.log('AUTH -> Aplicación corriendo sin autenticación 📛');
             }
 
         })
-        res.json({mesagge:'Secret status on refresh process!'})
+        res.json({mesagge:'Se inició exitosamente el proceso de refresco de crendenciales'})
     } catch (error) {
         res.json({message: error})
     }
@@ -76,11 +76,11 @@ authRouter.get('/refresh', async (req,res) => {
 
 authRouter.get('/reset', async (req,res) => {
 
-    console.log('AUTH -> Resetting secret...')
+    console.log('AUTH -> Volviendo a configurar las credenciales')
     try {
         if (secret === undefined) {
-            res.json({message:'There is no secret to reset'})
-            console.log('AUTH -> Already running with no Secret 📛');
+            res.json({message:'No existen credenciales'})
+            console.log('AUTH -> La aplicación continua corriendo sin autenticación 📛');
         } else {
             if ( (secret === req.headers.authorization)  ) {
 
@@ -90,14 +90,14 @@ authRouter.get('/reset', async (req,res) => {
                 })
 
                 resetSecretPromise.then((response) =>{
-                    console.log('AUTH -> ResetSecretPromise solved ✔')
+                    console.log('AUTH -> Promesa de reseteo finalizada exitosamente ✔')
                     if(response.deletedCount) {
                         secret = undefined
-                        console.log('AUTH -> Secret reseted, running with no secret 📛');
-                        res.json({message:'Secret succesfully reseted to default (no secret)'})
+                        console.log('AUTH -> Se limpiaron las credenciales existentes, corriendo sin autenticación 📛');
+                        res.json({message: 'Se removieron los credenciales existentes satisfactoriamente.'})
                     }})
             } else {
-                console.log('AUTH -> Failed to authenticate request ❌');
+                console.log('AUTH -> 📛 Se produjo un intento de autenticacion fallido para intentar reconfigurar las credenciales 📛.');
                 res.json({message: 'Credenciales incorrectas o inexistentes.'})
             }
 

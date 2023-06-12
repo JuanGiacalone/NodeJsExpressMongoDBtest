@@ -31,8 +31,9 @@ API Rest con MongoDB - Mongoose y Express / Backend para sitio web turistico de 
 1. Clonar
 2. Crear archivo .env con el campo DB_CONNECTION con el valor de la connection string de la base MongoDB a utilizar
 3. Configurar en el mismo archivo la variable APP_PUERTO, para definir el puerto de comunicacion
-4. npm install
-5. npm start
+4. Configurar la variable DB_NAME para indicar el nombre de la base. 
+5. npm install
+6. npm start
 ## Testear los endpoints
 1. Usar los .js de la carpeta axios_requests, ademas se encuentran los formato de cuerpo en formato JSON para realizar las peticiones
 2. Correrlos con node NombreArchivo.js o utilizando postman
