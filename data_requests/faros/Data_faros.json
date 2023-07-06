@@ -37,7 +37,7 @@
    "ubicacion": "No muy lejos de la Reserva Natural Turística Isla de los Pájaros, de gran valor biológico.",
    "turismo": "Poca información, realiza tu aporte en los comentarios!",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/ABROWN.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 3,
@@ -98,7 +98,7 @@
    "ubicacion": "La bahía Buen Suceso es una profunda entrada de 2,15 millas de ancho que se abre hacia el W en forma de 'V' profunda, truncada al fondo por una amplia playa de arena, rodeada por montañas de regular altura, que brindan protección a los buques en el fondeadero. El cabo Buen Suceso es una excelente referencia para el navegante.",
    "turismo": "Poca información, realiza tu aporte en los comentarios!",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/BSUCESO.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 6,
@@ -115,10 +115,10 @@
    "descripcion": " El faro se encuentra emplazado sobre el cabo del mismo nombre, que tiene 105 metros de elevación, en la costa norte de Río Gallegos, provincia de Santa Cruz. El faro se encuentra deshabitado.",
    "caracteristicas": "La construcción es una torre de hierro, con plataforma, barandilla y garita. Está pintada totalmente de negro y alimentada a gas acetileno y con un alcance óptico de 13,7 millas.",
    "historia": "El encargado de dirigir las obras fue el comandante del buque Balizador A.R.A 'ALFEREZ MACKINLAY', Teniente de Navío Julián Fablet, conjuntamente con 15 personas de la dotación del buque y de la Sección Faros y Balizas. Los trabajos se iniciaron el 20 de febrero de 1917 y fue librado al servicio el 8 de abril de 1917. El faro debe su nombre al cabo donde se encuentra erigido. El nombre de este accidente geográfico proviene de navegantes ingleses quienes lo bautizaron con el nombre de 'Cape Fair Weather'.",
-   "ubicacion": "Esta es la ubicacion",
-   "turismo": "Se llega al faro desde la ruta Nacional 3, a la altura del puente sobre el río Gallegos, donde nace la ruta Provincial 55, por donde se recorren aproximadamente 45 km en dirección este, pasando por la Estancia Cabo Buen Tiempo, donde se debe solicitar la autorización correspondiente.",
+   "ubicacion": "Se llega al faro desde la ruta Nacional 3, a la altura del puente sobre el río Gallegos, donde nace la ruta Provincial 55, por donde se recorren aproximadamente 45 km en dirección este, pasando por la Estancia Cabo Buen Tiempo, donde se debe solicitar la autorización correspondiente.",
+   "turismo": "El acceso depende de autorización. ¡Realiza tu aporte en los comentarios!",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/BTIEMPO.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 
 },
 {
@@ -139,7 +139,7 @@
    "ubicacion": "El faro Cabo Aristizábal se encuentra en el extremo norte del golfo San Jorge, en la provincia del Chubut. El faro se encuentra deshabitado",
    "turismo": "El faro está próximo a bahía Bustamante de donde provienen la mayoría de las algas marinas que se exportan o industrializan en el país. El campamento de recolectores de algas puede visitarse con permiso previo.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/ARISTIZABAL.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 8,
@@ -179,7 +179,7 @@
    "ubicacion": "El faro se encuentra a 18 km al norte de puerto San Julián, y por el camino se pasa por las antiguas instalaciones del frigorífico Swift, en funcionamiento entre los años 1912 y 1967. ",
    "turismo": " La zona de cabo Curioso posee una playas muy amplias y pintorescas, de aguas límpidas, que son frecuentadas por el turismo de San Julián, quienes la denominan 'La Perla del Atlántico Santacruceño'.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/CURIOSO.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 10,
@@ -199,7 +199,7 @@
    "ubicacion": "Se halla a 14 kilómetros al noreste de la ciudad de Puerto San Julián, en el Departamento Magallanes, en la Provincia de Santa Cruz, Patagonia Argentina.",
    "turismo": "Poca información, realiza tu aporte en los comentarios!",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/DANIOSO.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 11,
@@ -239,7 +239,7 @@
    "ubicacion": "Se encuentra dentro de la Reserva Natural Bahía Laura, que se destaca por la diversidad de aves como el cormorán de cuello negro, pato vapor y pingüinos magallánicos.",
    "turismo": "Cabo Guardián tiene unos 10 metros de altura. Es muy característico porque avanza en el mar y presenta una coloración rojiza de pedregullo. Está rodeado por una corona de restingas y bajos que se extienden hasta 5 millas.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/GUARDIAN.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 13,
@@ -259,7 +259,7 @@
    "ubicacion": "Se encuentra a 15 km al sur de la ciudad de Río Grande, el departamento Río Grande, en la provincia de Tierra del Fuego,",
    "turismo": "El topónimo del cabo fue dado por los hermanos Bartolomé y Gonzalo Nodal, el 20 de enero de 1620, día de San Sebastián, quienes bautizaron al cabo en recuerdo del 'Cabo de Peñas de Asturias'.​ ",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/PENIAS.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 14,
@@ -279,7 +279,7 @@
    "ubicacion": "Se llega al faro por la runa nacional número tres, luego se empalma con la 68 y nuevamente se desvía hacia la número 1.",
    "turismo": "Unos kms hacia el N se encuentra la Reserva Natutal Turística Punta Tombo, una gran pingüinera; y hacia el sur, la Reserva Natural Turística Cabo Dos Bahías, con pingüinos y lobos marinos.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/RASO.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 15,
@@ -359,7 +359,7 @@
    "ubicacion": "Se encuentra dentro de la Reserva Natural Bahía Laura. ",
    "turismo": "Dentro de la Reserva Natural, los aficionados a las aves pueden realizar interesantes avistajez de cormoranes de cuello negro y patos vapor.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/CAMPANA.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 19,
@@ -379,7 +379,7 @@
    "ubicacion": "Se accede tomando el camino que en dirección sur sale desde Rawson a Playa Santa Isabel. El faro se encuentra a 10 km de la ciudad de Rawson.",
    "turismo": "Poca información turistica, ¡realizá tu aporte en los comentarios!.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/CHUBUT.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 20,
@@ -419,7 +419,7 @@
    "ubicacion": "Ubicado prácticamente sobre un acantilado, el acceso se torna dificil.",
    "turismo": "Poca información turistica, ¡realizá tu aporte en los comentarios!.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/COIG.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 22,
@@ -439,7 +439,7 @@
    "ubicacion": "Ubicado en península Verde, a unos 50 km al noreste de la localidad de Pedro Luro, partido de Villarino. Se encuentra emplazado en un predio de 4 hectáreas, cedidas por el Sr. Adolfo Luro al Ministerio de Marina.",
    "turismo": "Poca información turistica, ¡realizá tu aporte en los comentarios!.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/RINCON.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 23,
@@ -459,7 +459,7 @@
    "ubicacion": "Hasta la roca donde se erige, se accede con bote, pero llegar a la señal se torna dificultoso debido a una pendiente de 20 metros, escarpada y con material rocoso disuelto.",
    "turismo": "Poca información turistica, ¡realizá tu aporte en los comentarios!.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/ESPERANZA.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 24,
@@ -479,7 +479,7 @@
    "ubicacion": "Se encuentra a 17 Km al sur del faro Cabo Blanco y aproximadamente 100 Km al norte de Puerto Deseado, en la provincia de Santa Cruz. ",
    "turismo": "Es una meseta agreste donde se pueden observar algunas pingüineras y aves diversas.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/GUZMAN.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 25,
@@ -519,7 +519,7 @@
    "ubicacion": "La isla Rasa con su faro del mismo nombre se sitúa al SE del cabo Dos Bahías.  ",
    "turismo": "Se encuentra dentro de una Reserva Natural Turística con pintoresca lobería y variedad de aves. Bahía Camarones es otro lugar de interés turístico, sobre todo para la pesca deportiva.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/RASA.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 27,
@@ -539,7 +539,7 @@
    "ubicacion": "Construido en la costa oriental de isla de los Estados, más precisamente en bahía Crossley.",
    "turismo": "Imposible llegar a él sin asistencia náutica.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/LEMAIRE.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 28,
@@ -599,7 +599,7 @@
    "ubicacion": "El faro Mar Chiquita se encuentra ubicado en la localidad de Mar de Cobo, partido de Mar Chiquita. Se accede a él, por medio de la ruta Provincial 11, km. 485,5 a cuatro kilómetros al sur de la Laguna de Mar Chiquita.",
    "turismo": "El faro se localiza sobre una costa dominada por arena y bajos médanos forestados en su gran parte. Muy frecuentado por turistas, se practica náutica y especialmente, pesca deportiva. Hay buen pique de lenguado, pejerrey y lisa. A pocos metros existe un muelle y refugio con alojamiento y alquiler de lanchas.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/CHIQUITA.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 31,
@@ -639,7 +639,7 @@
    "ubicacion": "Para acceder al faro se toma al norte la ruta provincial 1 hasta empalmar, a la derecha, la ruta provincial 2, que lleva a la península Valdés.",
    "turismo": "La peninusula de Valdés fue declarada Patrimonio Mundial Natural de la Humanidad por la UNESCO por su gran valor biológico donde pueden observarse aves marinas y costeras.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/MORRONUEVO.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 33,
@@ -659,7 +659,7 @@
    "ubicacion": "El faro se encuentra a unos 120 km de la ciudad de Río Grande.",
    "turismo": "Se encuentra en una zona de dificil acceso turistico",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/PARAMO.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 34,
@@ -679,7 +679,7 @@
    "ubicacion": "El faro Punta Bajos se encuentra ubicado en el extremo oriental de la Península Valdés, en las cercanías de la desembocadura de la caleta del mismo nombre.",
    "turismo": " La península fue declarada por la UNESCO como Patrimonio Mundial Natural de la Humanidad por su riqueza biológica y paisajística.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/PBAJOS.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 35,
@@ -699,7 +699,7 @@
    "ubicacion": "Linterna ubicada en el techo de una empresa peletera.",
    "turismo": "Poca información, ¡realizá tu aporte!",
    "urlImagen": "https://httpcats.com/204.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 36,
@@ -719,7 +719,7 @@
    "ubicacion": "El faro Punta Conscriptos se encuentra ubicado sobre la costa sur del Golfo Nuevo, entre la localidad de Puerto Madryn y Punta Ninfas, próximo a la Reserva Natural Turística Punta Loma.",
    "turismo": "Poca información, ¡realizá tu aporte!",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/CONSCRIPTOS.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 37,
@@ -739,7 +739,7 @@
    "ubicacion": "Se llega al faro recorriendo una distancia de 70 km al este de Puerto Pirámides, por la ruta Provincial 2.",
    "turismo": "Al pie del faro se encuentra una de las colonias de elefantes marinos más importantes de la Patagonia. Asimismo, en el terreno en donde se encuentra el faro funciona un hotel y restaurante de nivel internacional.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/DELGADA.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 38,
@@ -759,7 +759,7 @@
    "ubicacion": "El faro Punta Lobos se encuentra ubicado en el accidente geográfico homónimo, a aproximadamente 60 km al sur de Rawson, la capital de la provincia de Chubut. Se accede al faro por la ruta Nacional 3 o por la ruta Provincial 1, en ambos casos tomando el desvío hacia Punta Lobos. ",
    "turismo": "Poca información, ¡realizá tu aporte!",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/PLOBOS.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 39,
@@ -799,7 +799,7 @@
    "ubicacion": "Se encuentra en la llamada punta Medanosa.",
    "turismo": "Por su proximidad a Puerto Deseado, pueden realizarse paseos y excursiones que vinculan el avistaje del faro con la pesca deportiva.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/MEDANOSA.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 41,
@@ -881,7 +881,7 @@
    "ubicacion": "Se accede a este faro por la ruta 11, desde la ciudad de Magdalena, pasando por Punta Indio y desde allí se deben recorrer 18 km en dirección SSE. También se puede llegar desde Verónica, tomando el camino hacia la base Aeronaval Punta Indio, y de allí hasta la ruta 11.",
    "turismo": "El faro se encuentra dentro de la Estancia 'El Faro', la cual se identifica facilmente por la señorial mansión que se divisa desde la ruta. ",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/PPIEDRAS.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 45,
@@ -901,7 +901,7 @@
    "ubicacion": "El faro Punta Tehuelche se encuentra en el accidente geográfico homónimo en el sector oriental del istmo Ameghino, el cual une la península de Valdés con el continente. ",
    "turismo": "El faro se encuentra ubicado en la zona donde los primeros inmigrantes galeses desembarcaran a fines del siglo XIX, y fundaran el Fuerte San José. En la actualidad funciona, en las cercanías, una estación experimental del INTA (Instituto Nacional de Tecnología Agropecuaria). ",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/TEHUELCHE.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 46,
@@ -1021,7 +1021,7 @@
    "ubicacion": "El faro Cabo San Diego se encuentra ubicado en el extremo oriental de la Isla Grande de Tierra del Fuego, sobre el cabo homónimo. ",
    "turismo": "El acceso al faro se realiza únicamente por mar, siendo muy arriesgado su desembarco cuando existe oleaje. El terreno de acceso al faro es muy escarpado, tornando más difícil su accesibilidad como también la provisión de materiales. Últimamente, se ha verificado la existencia de un terreno apto para el aterrizaje y despegue de helicópteros.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/SANDIEGO.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 52,
@@ -1041,7 +1041,7 @@
    "ubicacion": "Se encuentra entre puerto San Julián al N y puerto Santa Cruz al S. En la Reserva Provincial Provincia de San Julián.",
    "turismo": "En la Reserva Provincial de San Julián puede realizarse una excursión náutica visitando la isla de los Pingüinos, de variada avifauna, y el banco Justicia donde anidan gran cantidad de cormoranes. Por su parte, el puerto Santa Cruz tiene una rica trayectoria histórica. Fundado en 1878 en el cañadón Misioneros, fue la capital del Territorio de Santa Cruz hasta 1904.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/FPAULA.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 53,
@@ -1061,7 +1061,7 @@
    "ubicacion": "En las cercanias de la bahía Aguirre.",
    "turismo": "Se encuentra construido sobre pequeños mogotes. Puede ser utilizado para avistaje de avifauna nativa.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/GONZALO.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 54,
@@ -1081,7 +1081,7 @@
    "ubicacion": "Este faro se encuentra instalado a unas noventa millas al Noroeste de la ciudad de Comodoro Rivadavia.",
    "turismo": "Se encuentra sobre una meseta árida, próximo a un acantilado. Puede servir para avistar avifauna local.",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/GREGORIO.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 55,
@@ -1122,7 +1122,7 @@
    "ubicacion": "Poca información, ¡realizá tu aporte!",
    "turismo": "Poca información, ¡realizá tu aporte!",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/SJOSE.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 57,
@@ -1202,7 +1202,7 @@
    "ubicacion": "Se encuentra a unos 20 Km al sur del puerto de Santa Cruz, sobre una elevación de aproximadamente 150 metros y próximo al monte Entrada. Fue construido en plena meseta patagónica, debiendo soportar las inclemencias meteorológicas de esas solitarias geografías.",
    "turismo": "Poca información, ¡realizá tu aporte!",
    "urlImagen": "http://www.hidro.gob.ar/Balizamiento/Faros/FOTOS/SCRUZ.jpg",
-   "urlVista": "https://httpcats.com/204.jpg"
+   "urlVista": "/contribute"
 },
 {
     "idFaro": 61,

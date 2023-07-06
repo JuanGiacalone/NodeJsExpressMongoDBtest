@@ -56,6 +56,7 @@ farosRouter.post('/batch', async (req,res) => {
 
                 let response = await saveFaro(req.body[index])
                 responses.push(response)
+                console.log(index + response);
             }
             if (!responses.length) {
                 res.json({message: 'Existe un problema en el body de la request, leer documentacion.'})
